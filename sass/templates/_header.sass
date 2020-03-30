@@ -1,0 +1,67 @@
+.header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 99
+  background-color: $dark
+  padding: 0 5.71rem
+  display: flex
+  align-items: flex-start
+  justify-content: center
+  &__container
+    display: flex
+    justify-content: flex-start
+
+.menu
+  width: 100%
+  max-width: 1256px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1.571rem 0
+  &__logo
+    margin: 0
+    &:hover
+      text-shadow: 0px 5px 15px rgba($primary, .2)
+  &__nav
+    margin-left: 0rem
+  &__contacts
+    display: flex
+    align-items: center
+  &--footer
+    padding: 0
+
+
+.logo
+  font-family: 'Futura Demi', cursive
+  color: $primary
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 1rem
+
+.nav
+  padding-left: 1.2rem
+  &__item
+    font-family: 'Futura Book', cursive
+    font-size: 1rem
+    font-weight: normal
+    text-decoration: none
+    color: $light
+    text-transform: uppercase
+    margin-right: 2.65rem
+    transition: color .2s
+    &:hover
+      color: $primary
+
+.phone
+  color: $primary
+  &:hover
+    text-shadow: 0px 5px 15px rgba($primary, .3)
+
+.contacts
+  &__phone
+    min-width: 9rem
+    margin-right: 3.214rem
+  &__button
+    margin-right: 0

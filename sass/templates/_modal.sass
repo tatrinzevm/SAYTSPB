@@ -1,0 +1,114 @@
+.modal__success, .modal__error
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, .6)
+  z-index: 199
+  display: flex
+  align-items: center
+  justify-content: center
+.modal
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, .6)
+  z-index: 199
+  display: flex
+  align-items: center
+  justify-content: center
+  &__container
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 2rem
+    background-color: $dark
+  &--visibility
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    background: $dark url('../img/bg-lines.svg') no-repeat center
+    padding: 2.357rem 3.5rem 1.928rem 3.5rem
+    color: $light
+    max-width: 36.357rem
+  &__close
+    position: absolute
+    top: 0
+    right: 0
+    width: 28px
+    height: 28px
+    background: transparent url('../img/ico/x-circle.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.357rem
+    line-height: 140%
+    text-align: center
+    margin: 0
+    margin-bottom: 1.9rem
+  &__text
+    margin-bottom: 3rem
+    font-size: 1.5rem
+    color: $primary
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    // margin-bottom: 3.428rem
+    // &:last-of-type
+    //   margin-bottom: 1rem
+    &-group
+      display: flex
+      flex-direction: column
+      position: relative
+      margin-bottom: 3.3rem
+      &:nth-of-type(3)
+        margin-bottom: 0rem
+    &--light
+      &::placeholder
+        font-family: 'Futura Book', cursive
+        color: $light
+        opacity: 1
+  &__policy
+    position: relative
+    margin-bottom: 2.7rem
+    & > .invalid
+      left: 0
+      bottom: -1.5rem
+  &__button
+    align-self: flex-end
+    &--OK
+      padding: 0.5rem
+      font-size: 1rem
+div
+  &.invalid
+    position: absolute
+    background-color: rgba(red, 0.3)
+    color: $light
+    text-align: center
+    padding: 1px
+    right: 0
+    bottom: -1.3rem
+.policy
+  & > div
+    &.invalid
+      width: 100%
+
+
+
+
