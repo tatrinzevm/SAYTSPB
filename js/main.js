@@ -14,6 +14,8 @@ $(document).ready(function () {
     modal.toggleClass('modal--visibility');
   });
 
+  
+
   /*Привязка на кнопку отслеживания события click, которое вызывает открытие модального окна*/
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visibility');
