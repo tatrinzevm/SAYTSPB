@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="stylesheet" href="css/animate.css"> -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
   <title>SAYTSPB</title>
@@ -44,7 +42,7 @@
         
         <div class="contacts menu__contacts">
           <a href="tel:+78129921030" class="phone contacts__phone">+7(812)-992-10-30</a>
-          <button class="button contacts__button button--primary" data-toggle='modal'>Заказать звонок</button>
+          <button class="button contacts__button" data-toggle='modal'>Заказать звонок</button>
         </div>
       </div>
       <!-- /.menu -->
@@ -53,137 +51,166 @@
   </header>
   <main>
     <section class="hero" id="home">
-      <div class="instagram hero__instagram wow bounceInDown">
-        <a href="https://www.instagram.com" class="instagram__link" target="_blank">Instagram</a>
+      <div class="aside hero__aside">
+        <div class="red__line"></div>
+        <div class="icons">
+          <a href="https://web.whatsapp.com/send?phone=78129921030" class="link__whatsapp" target="_blank">
+            <img src="/img/icons/whatsapp-primary.svg" alt="WhatsApp" title="Связаться с нами по WhatsApp" class="aside__ico">
+          </a>
+          <a href="viber://chat?number=+78129921030" class="link__viber" target="_blank">
+            <img src="/img/icons/viber-pimary.svg" alt="Viber" title="Связаться с нами по Viber" class="aside__ico">
+          </a>
+          <a href="mailto:tatrinzevm@gmail.com" class="link__email" target="_blank">
+            <img src="/img/icons/email-primary.svg" alt="Email" title="Связаться с нами по Email" class="aside__ico">
+          </a>
+        </div>
+        
       </div>
       <div class="hero__container">
         <div class="container">
           <div class="hero__content">
-            <h1 class="title hero__title wow fadeInDownBig">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-Дону</span></h1>
-            <p class="hero__text wow zoomIn" data-wow-delay="1.8s">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-            <button class="button hero__button button--primary wow fadeInUpBig" data-toggle='modal'>Рассчитать стоимость</button>
-            <button class="button hero__button button--outline wow fadeInUpBig" data-toggle='modal'>Отправить заявку</button>
-            
+            <h1 class="title hero__title">Продвижение Сайтов
+              <span class="title--primary">в&nbsp;Санкт-Петербурге</span></h1>
+            <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <button class="button hero__button button--primary" data-toggle='modal'>Обратный звонок</button>
           </div>
           <!-- /.hero__content -->
         </div>
         
-        <a href="#projects" class="hero__scroll-down wow pulse" data-wow-delay="15s" data-wow-iteration="3">листайте вниз</a>
+        <!-- <a href="#projects" class="hero__scroll-down wow pulse" data-wow-delay="15s" data-wow-iteration="3">листайте вниз</a> -->
       </div>
       <!-- /.container -->
       
     </section>
     <!-- /.hero -->
-    <section class="section section--dark projects projects__section--dark" id="projects">
-      <div class="container">
+    <section class="section advantages advantages__section" id="advantages">
+      <div class="indicators indicators__box">
+        <div class="indicators__card">
+          <div class="indicators__value">11</div>
+          <!-- /.indicator__value -->
+          <div class="indicators__label">Лет на рынке</div>
+          <!-- /.indicator__label -->
+        </div>
+        <!-- /.indicator__card -->
+        <div class="indicators__card">
+          <div class="indicators__value">>200</div>
+          <!-- /.indicator__value -->
+          <div class="indicators__label">Клиентов на раскрутке</div>
+          <!-- /.indicator__label -->
+        </div>
+        <!-- /.indicator__card -->
+        <div class="indicators__card">
+          <div class="indicators__value">121%</div>
+          <!-- /.indicator__value -->
+          <div class="indicators__label">Прирост посещаемости</div>
+          <!-- /.indicator__label -->
+        </div>
+        <!-- /.indicator__card -->
+        <div class="indicators__card">
+          <div class="indicators__value">2200</div>
+          <!-- /.indicator__value -->
+          <div class="indicators__label">Заявок у клиентов</div>
+          <!-- /.indicator__label -->
+        </div>
+        <!-- /.indicator__card -->
+      </div>
+      <!-- /.indicators -->
+      <div class="video advantages__video">
+        <a data-fancybox href="https://youtu.be/mAN4L9ch-z4" class="advantages__video-play">
+          <img src="/img/play-video.png" alt="Play">
+        </a>
+        <div id="player"></div>
+      </div>
+      <!-- /.video advantages__video -->
+      <div class="container advantages__container">
+        <h2 class="section-title advantages__section-title">Наши Преимущества</h2>
+        <p class="section-title__text advantages__section-title__text">Профессиональный подход - расплывчатая формулировка, которой давно не принято доверять. Лучший способ рекламы - благоприятные отзывы заказчиков и практические примеры работ, которые представлены ниже.</p>
         <div class="row">
-          <div class="col-40">
-            <div class="section-title section-title--left">
-              <h2 class="section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
-               <!-- /.section-title__heading -->
-              <p class="section-title__text--projects">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
-            </div>
-            <!-- /.section-title -->
-            <div class="swiper-container">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Город:</h3>
-                      <span class="swiper-slider__value">Ростов-на-Дону</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Площадь:</h3>
-                      <span class="swiper-slider__value">81 м2</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                      <span class="swiper-slider__value">3,5 месяца</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Стоимость:</h3>
-                      <span class="swiper-slider__value">По запросу</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Город:</h3>
-                      <span class="swiper-slider__value">Ростов-на-Дону</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Площадь:</h3>
-                      <span class="swiper-slider__value">82 м2</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                      <span class="swiper-slider__value">3,5 месяца</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Стоимость:</h3>
-                      <span class="swiper-slider__value">По запросу</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Город:</h3>
-                      <span class="swiper-slider__value">Ростов-на-Дону</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Площадь:</h3>
-                      <span class="swiper-slider__value">83 м2</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                      <span class="swiper-slider__value">3,5 месяца</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                    <div class="swiper-slide__text">
-                      <h3 class="swiper-slide__heading">Стоимость:</h3>
-                      <span class="swiper-slider__value">По запросу</span>
-                    </div>
-                    <!-- /.swiper-slide__text -->
-                  </div>
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/money_bag.png" alt="">
               </div>
-              
-          
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-next"></div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Работа без предоплаты</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Оплата исключительно по факту результатов месячного сотрудничества.</div>
+              <!-- /.card_description -->
             </div>
+            <!-- /.card -->
           </div>
-          <!-- /.col-50 -->
-          <div class="col-60">
-            <!-- Slider main container -->
-            <div class="swiper-container swiper-container--images">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <img src="img/projects/project-01.jpg" alt="">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/projects/project-02.jpg" alt="">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="img/projects/project-03.jpg" alt="">
-                  </div>
+          <!-- /.col-30 -->
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/human_head.png" alt="">
               </div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Идивидуальный подход</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Возможность сотрудничества по типовым алгоритмам или с совместной разработкой индивидуального проекта SEO-продвижения.</div>
+              <!-- /.card_description -->
             </div>
+            <!-- /.card -->
           </div>
-          <!-- /.col-50 -->
+          <!-- /.col-30 -->
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/multiple_choice.png" alt="">
+              </div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Готовые решения</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Готовые решения для различных ресурсов, от узкоспециализированных торговых площадок до масштабных коммерческих проектов.</div>
+              <!-- /.card_description -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/user_groups.png" alt="">
+              </div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Глубокий анализ</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Глубокий анализ целевой аудитории 
+                и статегии развития прямых конкурентов.</div>
+              <!-- /.card_description -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/google_sites.png" alt="">
+              </div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Актуализация ресурса</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Актуализация ресурса по мере корректировки поисковых алгоритмов.</div>
+              <!-- /.card_description -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+          <div class="col-30">
+            <div class="card">
+              <div class="card__img">
+                <img src="/img/icons/accounting.png" alt="">
+              </div>
+              <!-- /.card__img -->
+              <h2 class="card__title">Ежемесячные отчеты</h2>
+              <!-- /.card__title -->
+              <div class="card__description">Ежемесячные отчёты о предпринятых усилиях и практических результатах.</div>
+              <!-- /.card_description -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
         </div>
         <!-- /.row -->
         
@@ -449,28 +476,17 @@
   <!-- /.footer section section-dark -->
   <div class="modal">
     <div class="modal__dialog">
-      <button class="modal__close"></button>
-      <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="send.php" method="POST" class="form modal__form" onsubmit="ym(61432480, 'reachGoal', 'sendModalForm'); return true;">
         <input type="hidden" name="formName" value="modal">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
-          <input type="text" name="userName" class="input form__input modal__input--light" id="user-name" placeholder="Как вас зовут:" autocomplete="off">
+          <!-- <label for="user-name" class="label form__label label--light">Имя</label> -->
+          <input type="text" name="userName" class="input form__input modal__input--light" id="user-name" placeholder="Ваше имя" autocomplete="off">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
-          <input type="tel" name="userPhone" class="input form__input modal__input--light" id="user-phone" placeholder="Ваш номер телефона:" autocomplete="off">
+          <!-- <label for="user-phone" class="label form__label label--light">Телефон</label> -->
+          <input type="tel" name="userPhone" class="input form__input modal__input--light" id="user-phone" placeholder="Ваш номер телефона" autocomplete="off">
         </div>
-        <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label--light">Email</label>
-          <input type="email" name="userEmail" class="input form__input modal__input--light" id="user-email" placeholder="Ваш email" autocomplete="off">
-        </div>
-        <div class="policy modal__policy">
-          <input type="checkbox" name="policyCheckbox" id="policyCheckbox" class="policy__checkbox">
-          <label for="policyCheckbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
-        </div>
-        <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button class="button button--primary modal__button">Отправить</button>
       </form>
       <!-- /.form modal__form -->
     </div>
@@ -501,9 +517,9 @@
   <!-- /.button__flex-block -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

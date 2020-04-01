@@ -6,21 +6,14 @@ $(document).ready(function () {
       modalError = $('.modal__error'),
       modalForm = $('.modal__form'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close'),
       scrollUpBtn = $('.button__scroll-up__flex-block'),
       modalBtnOK = $('.modal__button--OK');
   scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
+  
   modalBtn.on('click', function () {
-    modal.toggleClass('modal--visibility');
+    modal.addClass('modal--visibility');
   });
 
-  
-
-  /*Привязка на кнопку отслеживания события click, которое вызывает открытие модального окна*/
-  closeBtn.on('click', function () {
-    modal.toggleClass('modal--visibility');
-  });
-  
   modalBtnOK.on('click', function (evt) {
     modalSuccess.removeClass('modal--visibility');
     modalError.removeClass('modal--visibility');
@@ -67,9 +60,9 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     if($(window).scrollTop()>100) {
-      scrollUpBtn.removeClass('button__scroll-up__flex-block--hidden wow bounceInUp');
+      scrollUpBtn.removeClass('button__scroll-up__flex-block--hidden');
     } else {
-      scrollUpBtn.addClass('button__scroll-up__flex-block--hidden wow bounceInUp');
+      scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
     }
   });
 
@@ -104,8 +97,6 @@ $(document).ready(function () {
   nextBtn.css('left', prevBtn.width() + 27 + bullets.width() + 27);
   bullets.css('left', prevBtn.width() + 27);
 
-  new WOW().init();
-
   //Валидация форм
   // Форма модального окна
   $('.modal__form').validate({
@@ -122,12 +113,7 @@ $(document).ready(function () {
         required: true,
         minlength: 18,
         maxlength: 18
-      },
-      userEmail: {
-        required: true,
-        email: true
-      },
-      policyCheckbox: "required"
+      }
     },
     messages: {
       userName: {
@@ -139,12 +125,7 @@ $(document).ready(function () {
         required: "Пожалуйста, укажите номер телефона",
         minlength: "Некорректный номер телефона",
         maxlength: "Некорректный номер телефона"
-      },
-      userEmail: {
-        required: "Пожалуста, укажите email",
-        email: "Email ожидается в формате name@domain.com"
-      },
-      policyCheckbox: "Вы должны согласиться с обработкой данных до отправки формы"
+      }
     },
     submitHandler: function (form) {
       $.ajax({

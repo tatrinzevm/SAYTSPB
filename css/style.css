@@ -380,8 +380,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding: 0;
-  padding-top: 5.8rem; }
+  padding: 0; }
 
 .container {
   width: 100%;
@@ -389,13 +388,14 @@ main {
 
 .row {
   width: 100%;
-  max-width: 1236px;
+  max-width: 1170px;
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
 
 .col-30 {
-  flex-basis: 31%; }
+  flex-basis: 32%; }
 
 .col-50 {
   flex-basis: 50%;
@@ -411,6 +411,39 @@ main {
   flex-basis: 40%;
   max-width: 40%; }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.7rem;
+  padding-bottom: 0.3rem;
+  padding-left: 1.4rem;
+  padding-right: 2.4rem;
+  border: none;
+  box-shadow: none; }
+  .card__img {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1.25rem; }
+  .card__title {
+    font-family: 'Ubuntu', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1.25rem; }
+  .card__description {
+    font-family: 'Ubuntu', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+    text-align: center;
+    color: #454646; }
+
 button:active, button:focus, input:active, input:focus {
   outline: none; }
 
@@ -423,7 +456,10 @@ button:active, button:focus, input:active, input:focus {
   font-family: 'Ubuntu', serif;
   font-weight: 500;
   font-size: 1em;
-  color: #fff; }
+  color: #fff;
+  background-color: #ff5a3c;
+  transition: background-color .3s;
+  transition: color .3s; }
   .button:hover {
     box-sizing: border-box;
     cursor: pointer;
@@ -431,11 +467,10 @@ button:active, button:focus, input:active, input:focus {
     background-color: transparent;
     color: #ff5a3c; }
   .button--primary {
-    background-color: #ff5a3c;
-    color: #fff;
-    transition: background-color .3s; }
-    .button--primary:hover {
-      box-shadow: none; }
+    width: 100%;
+    height: 100%;
+    max-width: 13.6875rem;
+    max-height: 3.0625rem; }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
@@ -495,11 +530,13 @@ button:active, button:focus, input:active, input:focus {
 
 .input {
   background-color: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  font-size: 1.285rem;
-  color: #fff;
-  padding: 0.5rem 0; }
+  border: 1px solid #b1b0b0;
+  border-radius: 10px;
+  font-family: 'Ubuntu', serif;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #878585;
+  padding: 0.75rem 1.125rem; }
 
 .success {
   background-color: rgba(103, 181, 137, 0.1); }
@@ -525,8 +562,9 @@ img {
   max-width: 100%; }
 
 a {
-  text-decoration: none;
-  cursor: pointer; }
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer; }
 
 .section {
   padding: 60px 0;
@@ -539,11 +577,7 @@ a {
     background-color: #131313;
     color: #fff; }
   .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive;
-    font-size: 20px;
-    font-weight: normal; }
+    text-align: center; }
     .section-title--light {
       color: #fff; }
     .section-title--left {
@@ -615,7 +649,7 @@ a {
   width: 100%;
   max-height: 4,6875rem;
   z-index: 99;
-  background-color: #fff;
+  background-color: transparent;
   padding: 0 5.71rem;
   display: flex;
   align-items: flex-start;
@@ -714,43 +748,50 @@ a {
 
 .hero {
   width: 100%;
-  background: #131313;
-  height: calc(100vh - 5.8rem);
-  max-height: 707px;
+  background-color: #fff;
+  background-image: url("../img/hero-bg-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -10px;
+  background-position-x: -5px;
+  height: 100vh;
+  max-height: 1190px;
   color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center; }
+  .hero__aside {
+    position: absolute;
+    left: 3.5rem;
+    top: 8.5rem; }
   .hero__container {
     width: 100%;
-    padding-top: 1rem;
     background-origin: content-box;
-    background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative; }
-    .hero__container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(19, 19, 19, 0.7); }
+  .hero__title {
+    margin: 0; }
   .hero__content {
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
     position: relative;
-    max-width: 47.587rem;
-    margin-left: 1.5rem; }
+    width: 100%;
+    max-width: 47.587rem; }
   .hero__text {
-    font-family: 'Futura Book', serif;
-    font-size: 1.571rem;
-    max-width: 35.714rem;
-    line-height: 140%;
+    font-family: 'Ubuntu', serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    word-spacing: 0;
+    max-width: 35.3rem;
+    max-height: 6.9rem;
+    line-height: 1.8125rem;
+    color: #2e2e2d;
     margin: 0;
-    margin-bottom: 3.1rem; }
+    margin-bottom: 3.1rem;
+    overflow: hidden; }
   .hero__button {
     margin-right: 1.2rem; }
   .hero__instagram {
@@ -781,116 +822,148 @@ a {
       background-color: transparent;
       margin-left: 12px; }
 
-.instagram {
-  background-color: #131313;
+.aside {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
-  .instagram__link {
-    display: flex;
-    align-items: center;
-    padding-right: 7rem;
-    transform: rotate(90deg);
-    text-transform: uppercase;
-    color: #ff5a3c;
-    text-decoration: none;
-    line-height: 0.8; }
-    .instagram__link::after {
-      content: '';
-      width: 51px;
-      height: 1px;
-      background-color: #ff5a3c;
-      margin-left: 8px; }
+  justify-content: space-between;
+  height: 70vh;
+  max-height: 48.625rem;
+  z-index: 99; }
+  .aside__ico {
+    max-width: 1.4375rem;
+    max-height: 1.4375rem;
+    position: relative; }
+    .aside__ico:hover {
+      cursor: pointer;
+      left: -0.1875rem;
+      top: -0.1875rem;
+      max-width: 1.8125rem;
+      max-height: 1.8125rem; }
+
+.red__line {
+  content: '';
+  height: 100%;
+  max-height: 50.4375rem;
+  width: 4px;
+  border-radius: 2px;
+  background-color: #ff5a3c;
+  margin-bottom: 2.375rem;
+  margin-left: 3px; }
+
+.icons {
+  height: 100%;
+  max-height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.link__whatsapp {
+  width: 1.375rem;
+  height: 1.3125rem; }
+
+.link__viber {
+  width: 1.3125rem;
+  height: 1.4375rem; }
+
+.link__email {
+  width: 1.25rem;
+  height: 0.9375rem; }
 
 .title {
-  margin-top: 0;
-  margin-bottom: 1.15rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  font-size: 2.857rem;
-  line-height: 131%; }
+  max-width: 39rem;
+  padding-bottom: 2.3rem;
+  font-family: 'Ubuntu', serif;
+  letter-spacing: -3px;
+  word-spacing: -3px;
+  font-size: 3.875rem;
+  font-weight: 700;
+  line-height: 122.58%;
+  color: #363636; }
   .title--primary {
     color: #ff5a3c; }
 
-.control {
+.advantages {
   background-color: #fff;
-  padding-bottom: 0; }
-  .control__section-title {
-    margin-bottom: 2.214rem;
-    margin-top: -30rem; }
-  .control__video {
-    margin: auto;
+  padding-bottom: 0;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .advantages__video {
+    background: #fff url("../img/bg-video.jpg") no-repeat center/cover;
+    width: 100%;
+    min-height: 39.5625rem;
     display: flex;
-    margin-bottom: 4.428rem;
     justify-content: center;
     align-items: center;
-    position: relative;
-    max-width: 58.357rem;
-    min-height: 31rem;
-    background: #131313 url("../img/video-preview.jpg") center no-repeat;
-    box-shadow: 0px 20px 50px rgba(19, 19, 19, 0.15); }
-    .control__video::before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-color: rgba(19, 19, 19, 0.8); }
-  .control__text {
-    max-width: 40.786rem;
-    margin: auto;
-    margin-bottom: 4.285rem;
-    text-align: center;
-    font-size: 1.428rem;
-    line-height: 2.4rem; }
-    .control__text::before {
-      display: block;
-      content: '';
-      width: 55px;
-      height: 2px;
-      margin: auto;
-      margin-bottom: 2.5rem;
-      border-radius: 30px;
-      background-color: #ff5a3c; }
-  .control__form {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 55rem;
-    margin: auto;
-    justify-content: space-between; }
-  .control__input-group {
+    padding-top: 7.5rem; }
+    .advantages__video-play {
+      border-radius: 50%;
+      width: 7.625rem;
+      height: 7.625rem;
+      transition: box-shadow 0.3s; }
+      .advantages__video-play:hover {
+        box-shadow: 0 0 10px 2px #fff;
+        cursor: pointer; }
+  .advantages__container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    flex-basis: 30%; }
-  .control__input {
-    color: #38393b; }
-    .control__input::-webkit-input-placeholder {
-      color: #38393b; }
-    .control__input::-moz-placeholder {
-      color: #38393b; }
-    .control__input:-ms-input-placeholder {
-      color: #38393b; }
-    .control__input::-ms-input-placeholder {
-      color: #38393b; }
-    .control__input::placeholder {
-      color: #38393b; }
-  .control__label {
-    color: rgba(19, 19, 19, 0.5);
-    margin-bottom: -7px; }
-  .control__button {
-    padding: 1.286rem 4.786rem; }
-  .control__policy {
-    flex-basis: 100%;
-    margin-top: 1.2rem;
-    position: relative; }
-    .control__policy-label {
-      justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem; }
+  .advantages__section-title {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'Ubuntu', serif;
+    font-size: 2.625rem;
+    font-weight: 700;
+    color: #2c2c2d; }
+    .advantages__section-title__text {
+      margin: 0;
+      width: 100%;
+      max-width: 50rem;
+      font-family: 'Ubuntu', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.375rem;
+      color: #2c2c2d;
+      text-align: center;
+      padding-bottom: 1.8rem; }
 
-.video__play {
-  position: relative;
-  cursor: pointer; }
+.indicators {
+  width: 100%;
+  height: 100%;
+  max-width: 73.0625rem;
+  max-height: 20.1875rem;
+  box-shadow: 0 0 22px 5px rgba(34, 34, 34, 0.05);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6.8rem 3.25rem 7rem 3.125rem;
+  background: #fff url("../img/bg-indicators.jpg") no-repeat center/cover; }
+  .indicators__box {
+    position: absolute;
+    top: -7.5rem; }
+  .indicators__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .indicators__value {
+    font-family: 'Ubuntu', serif;
+    font-size: 3.875rem;
+    font-weight: 700;
+    color: #ff5a3c; }
+  .indicators__label {
+    font-family: 'Ubuntu', serif;
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #383736; }
 
 .designs {
   width: 100%;
@@ -906,45 +979,11 @@ a {
   .designs__section-title {
     margin-bottom: 2.214rem; }
 
-.section-title__heading {
-  font-size: 1.429rem;
-  line-height: 1.786rem; }
-
-.section-title__text {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 1.429rem;
-  font-weight: normal;
-  line-height: 1.95rem;
-  text-transform: none;
-  max-width: 52.929rem;
-  margin: 0 auto;
-  margin-top: 1.25rem;
-  margin-bottom: 1.2rem; }
-
-.section-title__image {
-  margin-bottom: 0; }
-
 .card__image {
   max-width: 392px;
   max-height: 421px; }
   .card__image--mobile {
     display: none; }
-
-.card__text {
-  position: relative;
-  margin: 0 auto;
-  margin-top: -34%;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-  max-width: 23.571rem;
-  padding: 1.786rem 2.071rem 3.5rem 2.429rem; }
-
-.card__title {
-  font-family: 'Yeseva One', sans-serif;
-  font-size: 1.286rem;
-  font-weight: normal;
-  color: #38393b;
-  margin-bottom: 0.5rem; }
 
 .card__list {
   padding-left: 1.2rem; }
@@ -953,7 +992,7 @@ a {
   font-family: 'Futura Book', sans-serif;
   font-size: 1.071rem;
   font-weight: normal;
-  color: #959595;
+  color: #363636;
   margin-bottom: 0.6rem; }
 
 .card__pricetag {
@@ -1040,45 +1079,11 @@ a {
   .types__section-title {
     margin-bottom: 2.214rem; }
 
-.section-title__heading {
-  font-size: 1.429rem;
-  line-height: 1.786rem; }
-
-.section-title__text {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 1.429rem;
-  font-weight: normal;
-  line-height: 1.95rem;
-  text-transform: none;
-  max-width: 52.929rem;
-  margin: 0 auto;
-  margin-top: 1.25rem;
-  margin-bottom: 1.2rem; }
-
-.section-title__image {
-  margin-bottom: 0; }
-
 .card__image {
   max-width: 392px;
   max-height: 421px; }
   .card__image--mobile {
     display: none; }
-
-.card__text {
-  position: relative;
-  margin: 0 auto;
-  margin-top: -34%;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-  max-width: 23.571rem;
-  padding: 1.786rem 2.071rem 3.5rem 2.429rem; }
-
-.card__title {
-  font-family: 'Yeseva One', sans-serif;
-  font-size: 1.286rem;
-  font-weight: normal;
-  color: #38393b;
-  margin-bottom: 0.5rem; }
 
 .card__list {
   padding-left: 1.2rem; }
@@ -1087,7 +1092,7 @@ a {
   font-family: 'Futura Book', sans-serif;
   font-size: 1.071rem;
   font-weight: normal;
-  color: #959595;
+  color: #363636;
   margin-bottom: 0.6rem; }
 
 .card__pricetag {
@@ -1219,7 +1224,7 @@ a {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
+  background-color: transparent;
   z-index: 199;
   display: flex;
   align-items: center;
@@ -1235,7 +1240,7 @@ a {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
+  background-color: transparent;
   z-index: 199;
   display: flex;
   align-items: center;
@@ -1252,20 +1257,12 @@ a {
     visibility: visible; }
   .modal__dialog {
     position: relative;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center;
-    padding: 2.357rem 3.5rem 1.928rem 3.5rem;
+    background: #fff;
+    padding: 2.4375rem 3.125rem 1.75rem 3.125rem;
     color: #fff;
-    max-width: 36.357rem; }
-  .modal__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 28px;
-    height: 28px;
-    background: transparent url("../img/ico/x-circle.svg") no-repeat center;
-    border: none;
-    margin: 12px;
-    cursor: pointer; }
+    width: 100%;
+    max-width: 23.1875rem;
+    box-shadow: 0 0 7px 6px rgba(34, 34, 34, 0.05); }
   .modal__title {
     font-family: 'Yeseva One', cursive;
     font-size: 1.357rem;
@@ -1279,34 +1276,16 @@ a {
     color: #ff5a3c; }
   .modal__form {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 10.375rem; }
   .modal__input-group {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 3.3rem; }
-    .modal__input-group:nth-of-type(3) {
-      margin-bottom: 0rem; }
-  .modal__input--light::-webkit-input-placeholder {
-    font-family: 'Futura Book', cursive;
-    color: #fff;
-    opacity: 1; }
-  .modal__input--light::-moz-placeholder {
-    font-family: 'Futura Book', cursive;
-    color: #fff;
-    opacity: 1; }
-  .modal__input--light:-ms-input-placeholder {
-    font-family: 'Futura Book', cursive;
-    color: #fff;
-    opacity: 1; }
-  .modal__input--light::-ms-input-placeholder {
-    font-family: 'Futura Book', cursive;
-    color: #fff;
-    opacity: 1; }
-  .modal__input--light::placeholder {
-    font-family: 'Futura Book', cursive;
-    color: #fff;
-    opacity: 1; }
+    margin-bottom: 1.12rem;
+    width: 100%; }
   .modal__policy {
     position: relative;
     margin-bottom: 2.7rem; }
@@ -1314,7 +1293,8 @@ a {
       left: 0;
       bottom: -1.5rem; }
   .modal__button {
-    align-self: flex-end; }
+    width: 100%;
+    max-width: 11.8125rem; }
     .modal__button--OK {
       padding: 0.5rem;
       font-size: 1rem; }
@@ -1324,7 +1304,7 @@ div.invalid {
   background-color: rgba(255, 0, 0, 0.3);
   color: #fff;
   text-align: center;
-  padding: 1px;
+  padding: 0;
   right: 0;
   bottom: -1.3rem; }
 
@@ -1481,7 +1461,7 @@ div.invalid {
         margin: 0;
         justify-content: flex-start;
         font-size: 1.333rem;
-        color: #959595;
+        color: #363636;
         margin-bottom: 5.3rem; } }
 
 @media screen and (max-width: 576px) {

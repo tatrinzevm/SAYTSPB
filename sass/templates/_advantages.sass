@@ -1,71 +1,146 @@
-.control
+.advantages
   background-color: $light
   padding-bottom: 0
-  &__section-title
-    margin-bottom: 2.214rem
-    margin-top: -30rem
+  padding-top: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: relative
   &__video
-    margin: auto
+    background: $light url('../img/bg-video.jpg') no-repeat center / cover
+    width: 100%
+    min-height: 39.5625rem
     display: flex
-    margin-bottom: 4.428rem
     justify-content: center
     align-items: center
-    position: relative
-    max-width: 58.357rem
-    min-height: 31rem
-    background: $dark url('../img/video-preview.jpg') center no-repeat
-    box-shadow: 0px 20px 50px rgba($dark, 0.15)
-    &::before
-      position: absolute
-      left: 0
-      top: 0
-      content: ''
-      width: 100%
-      height: 100%
-      background-color: rgba($dark, 0.8)
-  &__text
-    max-width: 40.786rem
-    margin: auto
-    margin-bottom: 4.285rem
-    text-align: center
-    font-size: 1.428rem
-    line-height: 2.4rem
-    &::before
-      display: block
-      content: ''
-      width: 55px
-      height: 2px
-      margin: auto
-      margin-bottom: 2.5rem
-      border-radius: 30px
-      background-color: $primary
-  &__form
-    display: flex
-    flex-wrap: wrap
-    max-width: 55rem
-    margin: auto
-    justify-content: space-between
-  &__input-group
+    padding-top: 7.5rem
+    &-play
+      border-radius: 50%
+      width: 7.625rem
+      height: 7.625rem
+      transition: box-shadow 0.3s
+      &:hover
+        box-shadow: 0 0 10px 2px $light
+        cursor: pointer
+  &__container
     display: flex
     flex-direction: column
-    position: relative
-    flex-basis: 30%
-  &__input
-    color: $darkGray
-    &::placeholder
-      color: $darkGray
+    justify-content: center
+    align-items: center
+    padding-top: 5rem
+  &__section-title
+    margin: 0
+    margin-bottom: 2rem
+    font-family: 'Ubuntu', serif
+    font-size: 2.625rem
+    font-weight: 700
+    color: #2c2c2d
+    &__text
+      margin: 0
+      width: 100%
+      max-width: 50rem
+      font-family: 'Ubuntu', serif
+      font-size: 1rem
+      font-weight: 400
+      line-height: 1.375rem
+      color: #2c2c2d
+      text-align: center
+      padding-bottom: 1.8rem
+.indicators
+  width: 100%
+  height: 100%
+  max-width: 73.0625rem
+  max-height: 20.1875rem
+  box-shadow: 0 0 22px 5px rgba(34, 34, 34, 0.05)
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  padding: 6.8rem 3.25rem 7rem 3.125rem
+  background: $light url('../img/bg-indicators.jpg') no-repeat center / cover
+  &__box
+    position: absolute
+    top: -7.5rem
+  &__card
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  &__value
+    font-family: 'Ubuntu', serif
+    font-size: 3.875rem
+    font-weight: 700
+    color: $primary
   &__label
-    color: rgba($dark, 0.5)
-    margin-bottom: -7px
-  &__button
-    padding: 1.286rem 4.786rem
-  &__policy
-    flex-basis: 100%
-    margin-top: 1.2rem
-    position: relative
-    &-label
-      justify-content: center
-.video
-  &__play
-    position: relative
-    cursor: pointer
+    font-family: 'Ubuntu', serif
+    font-size: 1.375rem
+    font-weight: 700
+    color: #383736
+  
+//   &__video
+//     margin: auto
+//     display: flex
+//     margin-bottom: 4.428rem
+//     justify-content: center
+//     align-items: center
+//     position: relative
+//     max-width: 58.357rem
+//     min-height: 31rem
+//     background: $dark url('../img/video-preview.jpg') center no-repeat
+//     box-shadow: 0px 20px 50px rgba($dark, 0.15)
+//     &::before
+//       position: absolute
+//       left: 0
+//       top: 0
+//       content: ''
+//       width: 100%
+//       height: 100%
+//       background-color: rgba($dark, 0.8)
+//   &__text
+//     max-width: 40.786rem
+//     margin: auto
+//     margin-bottom: 4.285rem
+//     text-align: center
+//     font-size: 1.428rem
+//     line-height: 2.4rem
+//     &::before
+//       display: block
+//       content: ''
+//       width: 55px
+//       height: 2px
+//       margin: auto
+//       margin-bottom: 2.5rem
+//       border-radius: 30px
+//       background-color: $primary
+//   &__form
+//     display: flex
+//     flex-wrap: wrap
+//     max-width: 55rem
+//     margin: auto
+//     justify-content: space-between
+//   &__input-group
+//     display: flex
+//     flex-direction: column
+//     position: relative
+//     flex-basis: 30%
+//   &__input
+//     color: $darkGray
+//     &::placeholder
+//       color: $darkGray
+//   &__label
+//     color: rgba($dark, 0.5)
+//     margin-bottom: -7px
+//   &__button
+//     padding: 1.286rem 4.786rem
+//   &__policy
+//     flex-basis: 100%
+//     margin-top: 1.2rem
+//     position: relative
+//     &-label
+//       justify-content: center
+// .video
+//   &__play
+//     position: relative
+//     cursor: pointer

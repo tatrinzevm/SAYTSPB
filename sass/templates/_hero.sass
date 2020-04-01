@@ -1,42 +1,49 @@
 .hero
   width: 100%
-  background: $dark
-  height: calc(100vh - 5.8rem)
-  max-height: 707px
+  background-color: $light
+  background-image: url('../img/hero-bg-img.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position-y: -10px
+  background-position-x: -5px
+  height: 100vh
+  max-height: 1190px
   color: $light
   display: flex
   flex-direction: row
   justify-content: center
+  &__aside
+    position: absolute
+    left: 3.5rem
+    top: 8.5rem
   &__container
     width: 100%
-    padding-top: 1rem
     background-origin: content-box
-    background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
     display: flex
     flex-direction: row
     align-items: center
     justify-content: center
     position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      background: rgba($dark, .7)
+  &__title
+    margin: 0
   &__content
-    padding-bottom: 2.5rem
+    padding-bottom: 3rem
     position: relative
+    width: 100%
     max-width: 47.587rem
-    margin-left: 1.5rem
   &__text
-    font-family: 'Futura Book', serif
-    font-size: 1.571rem
-    max-width: 35.714rem
-    line-height: 140%
+    font-family: 'Ubuntu', serif
+    font-size: 1.25rem
+    font-weight: 300
+    letter-spacing: 0
+    word-spacing: 0
+    max-width: 35.3rem
+    max-height: 6.9rem
+    line-height: 1.8125rem
+    color: $silver
     margin: 0
     margin-bottom: 3.1rem
+    overflow: hidden
   &__button
     margin-right: 1.2rem
   &__instagram
@@ -67,35 +74,61 @@
       background-color: transparent
       margin-left: 12px
 
-
-.instagram
-  background-color: $dark
+.aside
   display: flex
+  flex-direction: column
   align-items: center
-  justify-content: center
-  &__link
-    display: flex
-    align-items: center
-    padding-right: 7rem
-    transform: rotate(90deg)
-    text-transform: uppercase
-    color: $primary
-    text-decoration: none
-    line-height: 0.8
-    &::after
-      content: ''
-      width: 51px
-      height: 1px
-      background-color: $primary
-      margin-left: 8px
+  justify-content: space-between
+  height: 70vh
+  max-height: 48.625rem
+  z-index: 99
+  &__ico
+    max-width: 1.4375rem
+    max-height: 1.4375rem
+    position: relative
+    &:hover
+      cursor: pointer
+      left: -0.1875rem
+      top: -0.1875rem
+      max-width: 1.8125rem
+      max-height: 1.8125rem
+.red__line
+  content: ''
+  height: 100%
+  max-height: 50.4375rem
+  width: 4px
+  border-radius: 2px
+  background-color: $primary
+  margin-bottom: 2.375rem
+  margin-left: 3px
+.icons
+  height: 100%
+  max-height: 7.5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.link
+  &__whatsapp
+    width: 1.375rem
+    height: 1.3125rem
+  &__viber
+    width: 1.3125rem
+    height: 1.4375rem
+  &__email
+    width: 1.25rem
+    height: 0.9375rem
+    
 
 
 .title
-  margin-top: 0
-  margin-bottom: 1.15rem
-  font-family: 'Yeseva One', cursive
-  text-transform: uppercase
-  font-size: 2.857rem
-  line-height: 131%
+  max-width: 39rem
+  padding-bottom: 2.3rem
+  font-family: 'Ubuntu', serif
+  letter-spacing: -3px
+  word-spacing: -3px
+  font-size: 3.875rem
+  font-weight: 700
+  line-height: 122.58%
+  color: $gray
   &--primary
     color: $primary

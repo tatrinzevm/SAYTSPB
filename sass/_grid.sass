@@ -6,7 +6,7 @@ main
   align-items: center
   margin: 0 auto
   padding: 0
-  padding-top: 5.8rem
+
 
 .container
   width: 100%
@@ -14,14 +14,15 @@ main
 
 .row
   width: 100%
-  max-width: 1236px
+  max-width: 1170px
   display: flex
   align-items: flex-start
   justify-content: space-between
+  flex-wrap: wrap
 
 .col
   &-30
-    flex-basis: 31%
+    flex-basis: 32%
   &-50
     flex-basis: 50%
     max-width: 50%
@@ -33,6 +34,41 @@ main
   &-40
     flex-basis: 40%
     max-width: 40%
+
+.card
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  padding-top: 1.7rem
+  padding-bottom: 0.3rem
+  padding-left: 1.4rem
+  padding-right: 2.4rem
+  border: none
+  box-shadow: none
+  &__img
+    min-width: 2.5rem
+    min-height: 2.5rem
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: flex-end
+    margin-bottom: 1.25rem
+  &__title
+    font-family: 'Ubuntu', serif
+    font-size: 1.25rem
+    font-weight: 700
+    margin: 0
+    margin-bottom: 1.25rem
+  &__description
+    font-family: 'Ubuntu', serif
+    font-size: 1rem
+    font-weight: 300
+    line-height: 1.375rem
+    text-align: center
+    color: #454646
+
+
 
 
 
