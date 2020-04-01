@@ -6,9 +6,9 @@ $(document).ready(function () {
       modalError = $('.modal__error'),
       modalForm = $('.modal__form'),
       modalBtn = $('[data-toggle=modal]'),
-      scrollUpBtn = $('.button__scroll-up__flex-block'),
+      scrollMenu = $('.menu__scroll__flex-block'),
       modalBtnOK = $('.modal__button--OK');
-  scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
+  scrollMenu.addClass('menu__scroll__flex-block--hidden');
   
   modalBtn.on('click', function () {
     modal.addClass('modal--visibility');
@@ -60,9 +60,9 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     if($(window).scrollTop()>100) {
-      scrollUpBtn.removeClass('button__scroll-up__flex-block--hidden');
+      scrollMenu.removeClass('menu__scroll__flex-block--hidden');
     } else {
-      scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
+      scrollMenu.addClass('menu__scroll__flex-block--hidden');
     }
   });
 
@@ -145,8 +145,8 @@ $(document).ready(function () {
       });
     }
   });
-  //Форма блока контроль
-  $('.control__form').validate({
+  //Форма блока расчет стоимости
+  $('.cost-calc__form').validate({
     errorElement: "div",
     errorClass: "invalid",
     validClass: "success",
@@ -156,12 +156,12 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: {
+      userEmail: {
         required: true,
-        minlength: 18,
-        maxlength: 18
+        email: true
       },
-      controlPolicyCheckbox: "required"
+      userSite: 'required',
+      userMessage: 'required'
     },
     messages: {
       userName: {
@@ -169,12 +169,12 @@ $(document).ready(function () {
         minlength: "Имя не должно быть короче двух символов",
         maxlength: "Имя не должно быть длиннее пятнадцати символов"
       },
-      userPhone: {
-        required: "Пожалуйста, укажите номер телефона",
-        minlength: "Некорректный номер телефона",
-        maxlength: "Некорректный номер телефона"
+      userEmail: {
+        required: "Пожалуйста, укажите E-mail",
+        email: "Email ожидается в формате name@domain.com"
       },
-      controlPolicyCheckbox: "Вы должны согласиться с обработкой данных до отправки формы"
+      userSite: "Пожалуйста, укажите адрес сайта",
+      userMessage: "Пожалуйста, заполните текст сообщения"
     },
     submitHandler: function (form) {
       $.ajax({
@@ -182,16 +182,20 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
+          modal.removeClass('modal--visibility');
           modalSuccess.addClass('modal--visibility');
           $(form)[0].reset();
         },
         error: function (response) {
+          modal.removeClass('modal--visibility');
           modalError.addClass('modal--visibility');
           $(form)[0].reset();
         }
       });
     }
   });
+
+
   //Валидация формы footer
   $('.footer__form').validate({
     errorElement: "div",
