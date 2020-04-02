@@ -66,9 +66,9 @@ $(document).ready(function () {
     }
   });
 
-  scrollUpBtn.on('click', function () {
-    $("html,body").animate({scrollTop:0},500);
-  });
+  // scrollUpBtn.on('click', function () {
+  //   $("html,body").animate({scrollTop:0},500);
+  // });
 
   $('a[href*="#"]').click(function() {
     $("html,body").animate({
@@ -76,26 +76,6 @@ $(document).ready(function () {
     }, 400);
     return false;
 });
-
-
-  //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
-  var prevBtn = $('.swiper-button-prev'),
-      nextBtn = $('.swiper-button-next'),
-      bullets = $('.swiper-pagination');
-  nextBtn.css('left', prevBtn.width() + 27 + bullets.width() + 27);
-  bullets.css('left', prevBtn.width() + 27);
 
   //Валидация форм
   // Форма модального окна
@@ -262,7 +242,28 @@ $(document).ready(function () {
     event.target.playVideo();
   }
 
- 
+  var countImg = $('.cases__slider__image__container')[0].childElementCount;
+  var gallery = [];
+  var i = 0;
+  var currentImage = 0;
+  $('.cases__slider__image').each(function () {
+    gallery[i] = $(this);
+    if(i != currentImage) {gallery[i].hide();}
+    i++;
+  });
+
+  $('.slider__button__left').on('click', function () {
+    gallery[currentImage--].hide(0);
+    if(currentImage < 0) { currentImage = countImg - 1;}
+    $(gallery[currentImage]).fadeIn(0);
+  });
+
+  $('.slider__button__right').on('click', function () {
+    gallery[currentImage++].hide(0);
+    if(currentImage == countImg) { currentImage = 0;}
+    $(gallery[currentImage]).fadeIn(0);
+  });
+  
   // Маска для номера телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
 });
