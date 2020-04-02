@@ -530,7 +530,7 @@ button:active, button:focus, input:active, input:focus {
     width: 100%;
     max-height: 4.6875rem;
     z-index: 99;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 0 5.71rem;
     display: flex;
     align-items: flex-start;
@@ -669,7 +669,7 @@ a {
   margin-bottom: 3rem; }
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -1139,52 +1139,62 @@ a {
   text-align: center;
   margin: auto; }
 
-.types {
+.cases {
   width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding-bottom: 5rem; }
-  .types__container {
+  align-items: center;
+  justify-content: center; }
+  .cases__section {
+    padding: 0;
+    margin: 0;
+    padding-top: 7rem; }
+  .cases__container {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .types__section-title {
-    margin-bottom: 2.214rem; }
-
-.card__image {
-  max-width: 392px;
-  max-height: 421px; }
-  .card__image--mobile {
-    display: none; }
-
-.card__list {
-  padding-left: 1.2rem; }
-
-.card__item {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 1.071rem;
-  font-weight: normal;
-  color: #363636;
-  margin-bottom: 0.6rem; }
-
-.card__pricetag {
-  display: inline-block;
-  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
-  padding: 1rem 0 1rem 2.357rem;
-  text-align: left;
-  position: absolute;
-  left: 0.15rem;
-  bottom: -1.7rem;
-  width: 16.286rem;
-  height: 3.857rem;
-  background-color: #ff5a3c;
-  color: #fff;
-  font-family: 'Yeseva One', sans-serif;
-  font-size: 1.286rem;
-  text-transform: uppercase;
-  font-weight: normal; }
+  .cases__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    font-size: 2.625rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: 2.3321rem;
+    color: #2c2c2d; }
+    .cases__title__text {
+      width: 100%;
+      max-width: 50rem;
+      margin: 0;
+      padding: 0;
+      padding-top: 1.7rem;
+      padding-bottom: 2.7rem;
+      font-family: 'Ubuntu', serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: normal;
+      word-spacing: normal;
+      line-height: 1.375rem;
+      text-align: center;
+      color: #2c2c2d; }
+  .cases__slider {
+    width: 100%;
+    max-width: 69.4375rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem; }
+    .cases__slider__button {
+      width: 1.4375rem;
+      height: 2.6875rem; }
+    .cases__slider__image__container {
+      width: 100%;
+      height: 100%;
+      max-width: 60.375rem;
+      max-height: 31.625rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
