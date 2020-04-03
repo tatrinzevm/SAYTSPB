@@ -405,8 +405,11 @@ main {
     justify-content: flex-end; }
 
 .col-50 {
-  flex-basis: 50%;
-  max-width: 50%; }
+  display: flex;
+  flex-basis: 35%;
+  max-width: 35%;
+  flex-direction: row;
+  justify-content: flex-end; }
 
 .col-60 {
   flex-basis: 60%;
@@ -568,6 +571,17 @@ button:active, button:focus, input:active, input:focus {
 .input.invalid {
   background-color: rgba(189, 90, 79, 0.1); }
 
+.slider__button {
+  width: 100%;
+  height: 100%;
+  max-width: 1.4375rem;
+  max-height: 2.6875rem;
+  transition: max-width 0.3s;
+  transition: max-height 0.3s; }
+  .slider__button:hover {
+    max-width: 2rem;
+    max-height: 3.7391rem; }
+
 *, *:before, *:after, *:hover {
   box-sizing: border-box; }
 
@@ -678,7 +692,8 @@ a {
   padding: 0 5.71rem;
   display: flex;
   align-items: flex-start;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 199; }
   .header__container {
     display: flex;
     justify-content: space-between; }
@@ -1168,16 +1183,20 @@ a {
       align-items: center;
       width: 2rem;
       height: 3.7391rem; }
-    .cases__slider__image__container {
-      width: 100%;
-      height: 100%;
-      max-width: 60.375rem;
-      height: 31.625rem;
-      margin-left: 3.1875rem;
-      margin-right: 3.1875rem;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+    .cases__slider__image {
+      display: none; }
+      .cases__slider__image:first-of-type {
+        display: block; }
+      .cases__slider__image__container {
+        width: 100%;
+        height: 100%;
+        max-width: 60.375rem;
+        height: 31.625rem;
+        margin-left: 3.1875rem;
+        margin-right: 3.1875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
 
 .slider__button {
   width: 100%;
@@ -1189,6 +1208,308 @@ a {
   .slider__button:hover {
     max-width: 2rem;
     max-height: 3.7391rem; }
+
+.reviews {
+  width: 100%;
+  background: #fff url("../img/bg-img-reviews.jpg") no-repeat center/cover;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .reviews__section {
+    padding: 0;
+    margin: 0;
+    padding-top: 4.5rem;
+    padding-bottom: 4.9375rem; }
+  .reviews__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .reviews__title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    font-size: 2.625rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: 2.3321rem;
+    color: #2c2c2d; }
+    .reviews__title__text {
+      width: 100%;
+      max-width: 50rem;
+      margin: 0;
+      padding: 0;
+      padding-top: 1.7rem;
+      padding-bottom: 5rem;
+      font-family: 'Ubuntu', serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: normal;
+      word-spacing: normal;
+      line-height: 1.375rem;
+      text-align: center;
+      color: #2c2c2d; }
+  .reviews__slider {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.5rem; }
+    .reviews__slider__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 3.7391rem; }
+    .reviews__slider__card {
+      display: none; }
+      .reviews__slider__card:first-of-type {
+        display: block; }
+      .reviews__slider__card__container {
+        width: 100%;
+        height: 100%;
+        max-width: 58.1875rem;
+        height: 18.75rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center; }
+      .reviews__slider__card__title {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 10.1875rem;
+        max-width: 58.1875rem;
+        padding-bottom: 2.3125rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-family: 'Ubuntu', serif;
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 2rem;
+        color: #0d0d0d; }
+  .reviews__person {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .reviews__person__img {
+      height: 100%;
+      width: 100%; }
+      .reviews__person__img__container {
+        max-width: 6.5625rem;
+        max-height: 6.5625rem;
+        margin-right: 0.9375rem; }
+    .reviews__person__data {
+      display: flex;
+      flex-basis: 40%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; }
+    .reviews__person__name {
+      font-family: 'Ubuntu', serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #0d0d0d;
+      margin-bottom: 0.625rem; }
+    .reviews__person__desc {
+      font-family: 'Ubuntu', serif;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #848281; }
+
+.news {
+  width: 100%;
+  height: 100%;
+  background-color: #e3fbdd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .news__section {
+    padding: 0;
+    margin: 0;
+    padding-top: 4rem;
+    padding-bottom: 7.9375rem; }
+  .news__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .news__title {
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    font-family: 'Ubuntu', serif;
+    font-weight: 700;
+    font-size: 2.625rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: 2.3321rem;
+    color: #2c2c2d; }
+    .news__title__text {
+      width: 100%;
+      max-width: 50rem;
+      margin: 0;
+      padding: 0;
+      padding-top: 1.7rem;
+      padding-bottom: 3.5625rem;
+      font-family: 'Ubuntu', serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: normal;
+      word-spacing: normal;
+      line-height: 1.375rem;
+      text-align: center;
+      color: #2c2c2d; }
+  .news__slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 3.625rem; }
+    .news__slider__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 3.7391rem; }
+      .news__slider__button__container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 1.75rem;
+        max-width: 7.9375rem; }
+      .news__slider__button__left {
+        width: 3rem;
+        height: 1.75rem;
+        background: transparent url("../img/icons/long-arrow-left.png") no-repeat center/cover;
+        transparent: background 0.3s; }
+        .news__slider__button__left:hover {
+          background: transparent url("../img/icons/long-arrow-left-hover.png") no-repeat center/cover; }
+      .news__slider__button__right {
+        width: 3rem;
+        height: 1.75rem;
+        background: transparent url("../img/icons/long-arrow-right.png") no-repeat center/cover;
+        transparent: background 0.3s; }
+        .news__slider__button__right:hover {
+          background: transparent url("../img/icons/long-arrow-right-hover.png") no-repeat center/cover; }
+    .news__slider__card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: none; }
+      .news__slider__card:first-of-type {
+        display: flex; }
+      .news__slider__card__container {
+        width: 100%;
+        height: 100%;
+        max-width: 73.125rem;
+        height: 28.8125rem;
+        margin: 0;
+        margin-bottom: 3.75rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+      .news__slider__card__title {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 10.1875rem;
+        max-width: 58.1875rem;
+        padding-bottom: 2.3125rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-family: 'Ubuntu', serif;
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 2rem;
+        color: #0d0d0d; }
+      .news__slider__card__date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 3.5rem;
+        height: 4.125rem;
+        background-color: #ff5a3c;
+        border-radius: 5px;
+        padding: 0.9375rem; }
+        .news__slider__card__date__day {
+          font-family: 'Ubuntu', serif;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #fff; }
+        .news__slider__card__date__month {
+          font-family: 'Ubuntu', serif;
+          font-size: 0.875rem;
+          font-weight: 400;
+          color: #fff; }
+  .news__img {
+    height: 100%;
+    width: 100%; }
+    .news__img__container {
+      background: transparent url("../img/news/bg-img-news.jpg") no-repeat center/cover;
+      flex-basis: 70%;
+      width: 100%;
+      height: 100%;
+      max-width: 50rem;
+      max-height: 28.8125rem;
+      margin: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 1.5rem 1.3125rem; }
+  .news__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    max-width: 34.375rem;
+    max-height: 21.1875rem;
+    position: absolute;
+    left: 53%;
+    bottom: -25%;
+    box-shadow: 0 0 10px 3px rgba(34, 34, 34, 0.05);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2.25rem 3.25rem 2.3rem 2.5rem; }
+    .news__desc__container {
+      height: 100%;
+      max-height: 21.1875rem; }
+    .news__desc__title {
+      margin: 0;
+      font-family: 'Ubuntu', serif;
+      font-size: 1.25rem;
+      color: #121111;
+      font-weight: 500;
+      margin-bottom: 1.5rem; }
+    .news__desc__text {
+      margin: 0;
+      font-family: 'Ubuntu', serif;
+      font-size: 1rem;
+      color: #201f1f;
+      font-weight: 300;
+      line-height: 1.625rem;
+      margin-bottom: 3.5rem;
+      max-height: 7.5625rem;
+      overflow: hidden; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;

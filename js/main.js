@@ -241,29 +241,77 @@ $(document).ready(function () {
   function onPlayerReady(event) {
     event.target.playVideo();
   }
-
-  var countImg = $('.cases__slider__image__container')[0].childElementCount;
-  var gallery = [];
+// слайдер блока cases
+  var casesCountImg = $('.cases__slider__image__container')[0].childElementCount;
+  var casesGallery = [];
   var i = 0;
-  var currentImage = 0;
+  var casesCurrentImage = 0;
   $('.cases__slider__image').each(function () {
-    gallery[i] = $(this);
-    if(i != currentImage) {gallery[i].hide();}
+    casesGallery[i] = $(this);
+    if(i != casesCurrentImage) {casesGallery[i].hide();}
     i++;
   });
 
-  $('.slider__button__left').on('click', function () {
-    gallery[currentImage--].hide(0);
-    if(currentImage < 0) { currentImage = countImg - 1;}
-    $(gallery[currentImage]).fadeIn(0);
+  $('.cases__slider__button__left').on('click', function () {
+    casesGallery[casesCurrentImage--].hide(0);
+    if(casesCurrentImage < 0) { casesCurrentImage = casesCountImg - 1;}
+    $(casesGallery[casesCurrentImage]).show(0);
   });
 
-  $('.slider__button__right').on('click', function () {
-    gallery[currentImage++].hide(0);
-    if(currentImage == countImg) { currentImage = 0;}
-    $(gallery[currentImage]).fadeIn(0);
+  $('.cases__slider__button__right').on('click', function () {
+    casesGallery[casesCurrentImage++].hide(0);
+    if(casesCurrentImage == casesCountImg) { casesCurrentImage = 0;}
+    $(casesGallery[casesCurrentImage]).show(0);
   });
   
+  // слайдер блока reviews
+  var reviewsCountCard = $('.reviews__slider__card__container')[0].childElementCount;
+  var reviewsList = [];
+  var j = 0;
+  var reviewsCurrentCard = 0;
+  $('.reviews__slider__card').each(function () {
+    reviewsList[j] = $(this);
+    if(j != reviewsCurrentCard) {reviewsList[j].hide();}
+    j++;
+  });
+
+  $('.reviews__slider__button__left').on('click', function () {
+    reviewsList[reviewsCurrentCard--].hide(0);
+    if(reviewsCurrentCard < 0) { reviewsCurrentCard = reviewsCountCard - 1;}
+    $(reviewsList[reviewsCurrentCard]).show(0);
+  });
+
+  $('.reviews__slider__button__right').on('click', function () {
+    reviewsList[reviewsCurrentCard++].hide(0);
+    if(reviewsCurrentCard == reviewsCountCard) { reviewsCurrentCard = 0;}
+    $(reviewsList[reviewsCurrentCard]).show(0);
+  });
+
+  // слайдер блока news
+  var newsCountCard = $('.news__slider__card__container')[0].childElementCount;
+  var newsList = [];
+  var k = 0;
+  var newsCurrentCard = 0;
+  $('.news__slider__card').each(function () {
+    newsList[k] = $(this);
+    if(k != newsCurrentCard) {newsList[k].hide();}
+    k++;
+  });
+  $(document).on('click', function (evt) {
+    console.log(evt.target);
+  });
+
+  $('.news__slider__button__left').on('click', function () {
+    newsList[newsCurrentCard--].hide(0);
+    if(newsCurrentCard < 0) { newsCurrentCard = newsCountCard - 1;}
+    $(newsList[newsCurrentCard]).show(0);
+  });
+
+  $('.news__slider__button__right').on('click', function () {
+    newsList[newsCurrentCard++].hide(0);
+    if(newsCurrentCard == newsCountCard) { newsCurrentCard = 0;}
+    $(newsList[newsCurrentCard]).show(0);
+  });
   // Маска для номера телефона
   $('[type=tel]').mask('+7 (000) 000-00-00');
 });
