@@ -485,12 +485,6 @@ button:active, button:focus, input:active, input:focus {
     height: 100%;
     max-width: 13.6875rem;
     max-height: 3.0625rem; }
-  .button--outline {
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff; }
-    .button--outline:hover {
-      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2); }
   .buttonReturn {
     padding: 1rem 3rem;
     color: #fff;
@@ -1250,6 +1244,12 @@ a {
       line-height: 1.375rem;
       text-align: center;
       color: #2c2c2d; }
+  .reviews__link {
+    color: #2c2c2d;
+    text-decoration: none; }
+    .reviews__link:hover {
+      text-decoration: underline;
+      color: #ff5a3c; }
   .reviews__slider {
     width: 100%;
     display: flex;
@@ -1335,7 +1335,7 @@ a {
     padding: 0;
     margin: 0;
     padding-top: 4rem;
-    padding-bottom: 7.9375rem; }
+    padding-bottom: 4.2rem; }
   .news__container {
     display: flex;
     flex-direction: column;
@@ -1510,6 +1510,165 @@ a {
       margin-bottom: 3.5rem;
       max-height: 7.5625rem;
       overflow: hidden; }
+
+.question__section {
+  margin: 0;
+  background: #fff url("../img/img-bg-question.jpg") no-repeat center/contain;
+  background-position-x: 0.5rem;
+  padding: 5.4rem 0 6.8rem 0; }
+
+.question__container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 73.125rem;
+  max-height: 55.375rem; }
+
+.question__content {
+  height: 100%;
+  max-height: 35.4375rem;
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 3rem; }
+
+.question__link {
+  color: #1e1e1e;
+  text-decoration: none;
+  font-family: 'Ubuntu', serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5; }
+  .question__link:hover {
+    text-decoration: underline;
+    color: #ff5a3c; }
+  .question__link--title {
+    font-family: 'Ubuntu', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1e1e1e; }
+    .question__link--title:hover {
+      text-decoration: underline;
+      color: #ff5a3c; }
+
+.question__contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%; }
+  .question__contacts__addr {
+    width: 100%;
+    max-width: 6.8125rem; }
+    .question__contacts__addr__container {
+      width: 100%;
+      max-width: 13.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-right: 2rem;
+      padding: 0; }
+  .question__contacts__title {
+    font-family: 'Ubuntu', serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 1.1rem 0; }
+  .question__contacts__timetable {
+    width: 100%;
+    max-width: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .question__contacts__timetable__title {
+      font-family: 'Ubuntu', serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin: 0; }
+    .question__contacts__timetable__text {
+      font-family: 'Ubuntu', serif;
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: #1a1a1a;
+      margin: 0 0 1.7rem 0; }
+    .question__contacts__timetable__time {
+      font-family: 'Ubuntu', serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      margin: 0; }
+
+.question__wrap {
+  flex-basis: 50%;
+  width: 100%;
+  max-width: 34.25rem;
+  padding: 0;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+
+.question__title {
+  width: 100%;
+  text-align: left;
+  font-family: 'Ubuntu', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1e1e1e;
+  line-height: 135%;
+  letter-spacing: 1.5px;
+  margin: 0 0 3rem 0; }
+
+.question__input-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .question__input-group:last-of-type {
+    margin-bottom: 1.5rem; }
+
+.question__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .question__form__label {
+    width: 100%;
+    font-family: 'Ubuntu', serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #faf6f5;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem; }
+
+.question__input {
+  border: none;
+  border-bottom: 1px solid #464544;
+  border-radius: 0;
+  color: #413f3e;
+  padding: 0.3125rem 0;
+  margin-bottom: 1.2rem; }
+
+.question__button {
+  text-align: center;
+  margin: auto;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #ff5a3c;
+  margin: 0; }
+  .question__button:hover {
+    border: 1px solid #ff5a3c;
+    background-color: #ff5a3c;
+    color: #fff;
+    box-shadow: 0px 0px 30px inset rgba(255, 255, 255, 0.5); }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
@@ -1702,10 +1861,21 @@ div.invalid {
   position: absolute;
   background-color: rgba(255, 0, 0, 0.3);
   color: #fff;
+  text-shadow: #131313 0 0 5px;
   text-align: center;
   padding: 0;
   right: 0;
   bottom: 0; }
+  div.invalid--modal {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #fff;
+    text-shadow: #131313 0 0 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 0;
+    right: 0;
+    bottom: -0.8rem; }
 
 .policy > div.invalid {
   width: 100%; }

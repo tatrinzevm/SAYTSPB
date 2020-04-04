@@ -32,9 +32,9 @@
         </div></a>
         <div class="nav__container">
           <nav class="nav menu__nav">
-            <a href="#home" class="nav__item">Продвижение</a>
-            <a href="#projects" class="nav__item">Аудит</a>
-            <a href="#control" class="nav__item">Цены</a>
+            <a href="#promotion" class="nav__item">Продвижение</a>
+            <a href="#audit" class="nav__item">Аудит</a>
+            <a href="#prices" class="nav__item">Цены</a>
             <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
           <!-- /.nav -->
@@ -77,14 +77,13 @@
           <!-- /.hero__content -->
         </div>
         
-        <!-- <a href="#projects" class="hero__scroll-down wow pulse" data-wow-delay="15s" data-wow-iteration="3">листайте вниз</a> -->
-      </div>
+       </div>
       <!-- /.container -->
       
     </section>
     <!-- /.hero -->
     <section class="section advantages advantages__section" id="advantages">
-      <div class="indicators indicators__box">
+      <div class="indicators indicators__box" id="promotion">
         <div class="indicators__card">
           <div class="indicators__value">11</div>
           <!-- /.indicator__value -->
@@ -219,7 +218,7 @@
     </section>
     <!-- /.section advantages  -->
     <section class="section services section__services">
-      <div class="container services__container">
+      <div class="container services__container" id="audit">
         <h2 class="section-title services__section-title">Наши Услуги</h2>
         <p class="section-title__text services__section-title__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ex</p>
         <div class="row">
@@ -301,7 +300,7 @@
     <!-- /.section services section__services -->
 
     <section class="section cost-calc__section">
-      <div class="container cost-calc__container">
+      <div class="container cost-calc__container" id="prices">
         <div class="cost-calc__wrap">
           <h3 class="cost-calc__title">Узнать стоимость</h3>
           <form action="send.php" method="POST" class="form cost-calc__form" onsubmit="ym(61432480, 'reachGoal', 'costCalcFormSend'); return true;">
@@ -509,6 +508,54 @@
     </section>
     <!-- /.section news__section -->
 
+    <section class="section question__section">
+      <div class="container question__container" id="contacts">
+        <div class="question__content">
+          <h3 class="question__title">Остались вопросы?<br>Напишите нам!<br>Отправьте Ваше сообщение через форму или <a href="mailto:tatrinzevm@gmail.com" target="_blank" class="question__link--title">e-mail</a>.</h3>
+          <div class="question__contacts">
+            <div class="question__contacts__addr__container">
+              <h4 class="question__contacts__title">Адрес</h4>
+              <a href="https://goo.gl/maps/rB1jG6Kg9qK1wrkc8" target="_blank" class="question__link">Город Санкт-Петербург<br>Улица Мурзинская дом 11</a>
+              <a href="tel:+78129921030" class="question__link">+7(812)-992-10-30</a>
+              <a href="mailto:info@saytspb.ru" class="question__link" target="_blank">info@saytspb.ru</a>
+            </div>
+            <div class="question__contacts__timetable">
+              <span class="question__contacts__timetable__title">Рабочие дни</span>
+              <span class="question__contacts__timetable__text">Понедельник-Пятница</span>
+              <span class="question__contacts__timetable__title">Выходные</span>
+              <span class="question__contacts__timetable__text">Суббота-Воскресенье</span>
+              <span class="question__contacts__timetable__time">09:00-18:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="question__wrap">
+          <form action="send.php" method="POST" class="form question__form" onsubmit="ym(61432480, 'reachGoal', 'questionFormSend'); return true;">
+            <input type="hidden" name="formName" value="question">
+            <div class="input-group question__input-group">
+              <label for="user-name_question" class="label form__label question__form__label">Имя</label>
+              <input type="text" name="userName" class="input form__input question__input" id="user-name_question" placeholder="Иван Иванов" autocomplete="off">
+            </div>
+            <div class="input-group question__input-group">
+              <label for="user-email_question" class="label form__label question__form__label">E-Mail</label>
+              <input type="email" name="userEmail" class="input form__input question__input" id="user-email_question" placeholder="ivanov@gmail.com" autocomplete="off">
+            </div>
+            <div class="input-group question__input-group">
+              <label for="user-phone__question" class="label form__label question__form__label">Телефон</label>
+              <input type="tel" name="userPhone" class="input form__input question__input" id="user-phone__question" placeholder="+7 999 888-88-88" autocomplete="off">
+            </div>
+            <div class="input-group question__input-group">
+              <label for="user-message__question" class="label form__label question__form__label">Сообщение</label>
+              <input type="text" name="userMessage" class="input form__input question__input" id="user-message__question" placeholder="Введите Ваше сообщение" autocomplete="off">
+            </div>
+            <button class="button button--primary question__button question__button--light">Отправить</button>
+          </form>
+        </div>
+        <!-- /.question-wrap -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section question__section -->
+
 
   </main>
 
@@ -558,9 +605,9 @@
         </div></a>
         <div class="nav__container">
           <nav class="nav menu__nav">
-            <a href="#home" class="nav__item">Продвижение</a>
-            <a href="#projects" class="nav__item">Аудит</a>
-            <a href="#control" class="nav__item">Цены</a>
+            <a href="#promotion" class="nav__item">Продвижение</a>
+            <a href="#audit" class="nav__item">Аудит</a>
+            <a href="#prices" class="nav__item">Цены</a>
             <a href="#contacts" class="nav__item">Контакты</a>
           </nav>
           <!-- /.nav -->

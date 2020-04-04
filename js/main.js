@@ -81,7 +81,7 @@ $(document).ready(function () {
   // Форма модального окна
   $('.modal__form').validate({
     errorElement: "div",
-    errorClass: "invalid",
+    errorClass: "invalid--modal",
     validClass: "success",
     rules: {
       userName: {
@@ -91,8 +91,8 @@ $(document).ready(function () {
       },
       userPhone: {
         required: true,
-        minlength: 18,
-        maxlength: 18
+        minlength: 16,
+        maxlength: 16
       }
     },
     messages: {
@@ -177,7 +177,7 @@ $(document).ready(function () {
 
 
   //Валидация формы footer
-  $('.footer__form').validate({
+  $('.question__form').validate({
     errorElement: "div",
     errorClass: "invalid",
     validClass: "success",
@@ -187,13 +187,16 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
+      userEmail: {
+        required: true,
+        email: true
+      },
       userPhone: {
         required: true,
-        minlength: 18,
-        maxlength: 18
+        minlength: 16,
+        maxlength: 16
       },
-      userQuestion: "required",
-      questionPolicyCheckbox: "required"
+      userMessage: "required"
     },
     messages: {
       userName: {
@@ -201,13 +204,16 @@ $(document).ready(function () {
         minlength: "Имя не должно быть короче двух символов",
         maxlength: "Имя не должно быть длиннее пятнадцати символов"
       },
+      userEmail: {
+        required: "Пожалуйста, укажите E-mail",
+        email: "Email ожидается в формате name@domain.com"
+      },
       userPhone: {
         required: "Пожалуйста, укажите номер телефона",
         minlength: "Некорректный номер телефона",
         maxlength: "Некорректный номер телефона"
       },
-      userQuestion: "Пожалуйста, напишите свой вопрос",
-      questionPolicyCheckbox: "Вы должны согласиться с обработкой данных до отправки формы"
+      userMessage: "Пожалуйста, напишите свой вопрос"
     },
     submitHandler: function (form) {
       $.ajax({
@@ -225,7 +231,7 @@ $(document).ready(function () {
       });
     }
   });
-
+// YouTube видеоплеер
   var player;
   $('.video__play').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -313,5 +319,5 @@ $(document).ready(function () {
     $(newsList[newsCurrentCard]).show(0);
   });
   // Маска для номера телефона
-  $('[type=tel]').mask('+7 (000) 000-00-00');
+  $('[type=tel]').mask('+7 000 000-00-00');
 });
