@@ -1,470 +1,331 @@
-@media screen and ( max-width: 1300px)
+@media screen and (max-width: 3000px)
+  .burger-menu
+    display: none
+@media screen and (max-width: 1400px)
   html
-    font-size: 12px
-  .nav
-    &__item
-      margin-right: 1rem
-  .card
-    &__image
-      width: 100%
-      height: 100%
-  .projects
-    &__section
-      &--dark
-        padding: 0 1.5rem 23rem 1.5rem
+    font-size: 14px
+  .section
+    &__services
+      margin-bottom: 0
   .hero
-    padding-bottom: 5rem
-    padding-left: 0
-    padding-right: 0
-  .footer
+    &__aside
+      left: 1rem
+  .indicators
+    background-size: contain
+    &__box
+      padding: 1.5rem
+      max-height: 10rem
+      top: -5rem
+  .question
     &__section
-      min-width: 100%
-    &__wrap
-      margin-top: -25rem
-    &__menu
-      padding: 1rem 0
-    &__map
-      max-width: 100%
-      height: 100%
-      display: flex
+      background: $light url('../img/img-bg-question.jpg') no-repeat center / contain
+      background-position-x: center
+      background-size: auto 100%
+      background-clip: border-box
+  .container
+    margin-left: 3rem
+    margin-right: 3rem
+  .burger-menu
+    display: none
+@media screen and ( max-width: 1200px)
+  .hero
+    &__aside
+      left: 1rem
+    &__title
+      font-size: 2rem
+      letter-spacing: normal
+    &__text
+      font-size: 1rem
+  .indicators
+    background-size: contain
+    &__box
+      padding: 1.5rem
+      max-height: 10rem
+      top: -5rem
+  .news
+    &__slider
+      padding-left: 3rem
+  .container
+    padding-left: 3rem
+    padding-right: 3rem
+  .row
+    justify-content: flex-start
+    align-items: center
+    padding-left: 2rem
+    padding-right: 2rem
+  .col-30
+    flex-basis: 50%
+    &:nth-child(3n+1)
       justify-content: center
-      padding-left: 1.5rem
-      padding-right: 1.5rem
-      margin-bottom: 6rem
-  .designs
-    padding-bottom: 0
+      align-items: center
+    &:nth-child(3n+2)
+      justify-content: center
+      align-items: center
+    &:nth-child(3n+3)
+      justify-content: center
+      align-items: center
+  .question
     &__container
-      padding-bottom: 25rem
-      
-
+      padding-left: 0
+    &__title
+      font-size: 1.5rem
+    &__link
+      &--title
+        font-size: 1.5rem
+  .burger-menu
+    display: none
 
 @media screen and ( max-width: 992px)
+  html
+    font-size: 12px
+  .header
+    &__container
+      padding-left: 2rem
+      padding-right: 2rem
+    &__menu
+      display: none
+  .burger-menu
+    display: flex
+  .nav
+    &__container
+      // display: flex
+      align-items: flex-ends
+  .menu
+    &__contacts
+      // display: flex
+  .hidden
+    display: none
+
+  .hero
+    &__aside
+      display: none
+  .indicators
+    background-size: contain
+    max-width: 100%
+    &__box
+      position: static
+      padding: 1.5rem
+      max-height: 10rem
+  .advantages
+    &__video
+      padding-top: 0
+  .cost-calc
+    &__section
+      padding: 0
+    &__container
+      padding: 0
+      max-width: 100%
+      max-height: 100%
+    &__wrap
+      flex-basis: 60%
+      padding-top: 3rem
+      padding-bottom: 3rem
+  .cases
+    &__section
+      padding-top: 3rem
+  .reviews
+    &__section
+      padding-top: 4rem
+    &__container
+      padding-left: 1rem
+      padding-right: 1rem
+    &__slider
+      &__card
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &__container
+          margin-left: 1rem
+          margin-right: 1rem
+  .news
+    &__slider
+      padding-left: 0
+      &__card
+        height: auto
+        display: flex
+        &__container
+          height: auto
+          margin-bottom: 1rem
+    &__img
+      &__container
+        flex-basis: 50%
+    &__desc
+      position: static
+  .question
+    &__section
+      background-size: cover
+      background-position-x: 50%
+      background-position-y: center
+      padding-top: 0
+      padding-bottom: 2.5rem
+    &__container
+      max-width: 100%
+      max-height: 100%
+      padding-left: 2rem
+      justify-content: space-between
+    &__content
+      margin-right: 7rem
+    &__wrap
+      max-width: 100%
+  .footer
+    &__container
+      padding-top: 2rem
+      padding-bottom: 2rem
+  .container
+    margin-left: 0
+    margin-right: 0
+
+
+@media screen and (max-width: 767px)
   .header
     padding: 0
     &__container
-      padding: 0 1.5rem
-      width: 100%
-  .nav
-    display: none
+      padding-left: 1rem
+      padding-right: 1rem
   .hero
-    &__instagram
-      display: none
-    &__content
-      margin-left: 0
-    &__scroll-down
-      display: none
+    background-image: url('../img/hero-bg-img-mobile.jpg')
     &__container
-      padding: 0 1.5rem
-  .row
-    flex-direction: column
-    align-items: center
-  .types
+      padding-top: 4rem
+  .indicators
     &__card
-      margin-bottom: 4.29rem
-  .card
-    &__text
-      margin-left: 0
-    &__pricetag
-      bottom: 0
-  .col
-    &-50
-      padding-bottom: 3.333rem
-  .footer
-    &__menu
-      &__container
-        padding: 0 1.5rem
-        width: 100%
-
-@media screen and (max-width: 760px)
-  .row
-    flex-direction: column
-    align-items: center
-  .section
-    &--dark
-      padding: 0 1.5rem 23rem 1.5rem
-  .control
-    &__container
-      padding-left: 1.5rem
-      padding-right: 1.5rem
-  .projects
-    &__section
-      &--dark
-        padding: 0 1.5rem 23rem 1.5rem
-  .designs
-    &__container
-      padding-bottom: 1.5rem
-  .footer
-    &__section
-      min-width: 100%
-      padding-left: 0
-      padding-right: 0
-      padding-bottom: 0
-    &__wrap
-      margin-top: 0rem
-    &__menu
-      padding: 1rem 0
-      &__container
-        padding: 0 1.5rem
-        width: 100%
-    &__map
-      max-width: 100%
-      height: 100%
-      display: flex
+      align-items: center
       justify-content: center
-      padding-left: 1.5rem
-      padding-right: 1.5rem
-      margin-bottom: 6rem
-  
-  
-@media screen and ( max-width: 600px)
-  .swiper
-    &-slide
-      padding-bottom: 0
-  .row
-    flex-direction: row
-  .col-40, .col-60
-    flex-basis: 30%
-  .control
-    padding-bottom: 0
-    &__heading
-      padding-top: 2rem
-    &__form
-      justify-content: flex-start
-    &__input
+    &__value
       font-size: 1.5rem
-      margin-bottom: 0
-      padding-top: 0.1rem
-      border-color: rgba($light, 0.5)
-      &::placeholder
-        font-family: 'Futura Book', sans-serif
-        color: $darkGray
-        opacity: 1
-    &__input-group
-      &:first-of-type
-        margin-bottom: 5.1rem
-    &__button
-      max-width: 100%
-      order: 4
-      font-size: 1.25rem
-      max-height: 4.25rem
-    &__policy
-      margin-top: 1rem
-      &-label
-        padding: 0
-        margin: 0
-        justify-content: flex-start
-        font-size: 1.333rem
-        color: $gray
-        margin-bottom: 5.3rem
-  
-
-@media screen and ( max-width: 576px)
-  .header
-    position: static
-    &__container
-      padding: 1.9rem 1.5rem
-      width: 100%
-    &__menu
-      padding: 0
-  main
-    margin-top: 0
-    padding-top: 0
-  .contacts
-    &__phone
-      margin-right: 0
-      color: $light
-      text-decoration: none
-    &__button
-      display: none
-  .title
-    font-size: 1.917rem
-    font-weight: normal
-  .hero
-    width: 100%
-    height: auto
-    &__container
-      background: $dark url('../img/hero-bg-mobile.jpg') no-repeat center / cover
-      background-position: top
-      width: 100%
-      padding: 0 1.5rem
-    &__scroll-down
-      display: none
-    &__content
-      width: 100%
-      padding-top: 7rem
-    &__title
-      margin-bottom: 1rem
-      max-width: 23rem
-    &__text
-      width: 100%
-      max-width: 26.75rem
-      font-size: 1.5rem
-      font-weight: normal
-      line-height: 2rem
-      margin-bottom: 2.8rem
-    &__button
-      font-size: 1.083rem
-      font-weight: 500
-      display: block
-      width: 100%
-      margin-bottom: 2.2rem
-      max-width: 28.167rem
-      min-height: 4.25rem
-  
-  .section-title
-    &--left
-      padding-top: 3.1rem
-      letter-spacing: -0.07rem
-    &__heading
-      font-size: 1.833rem
-      &--light
-        color: $light
-        margin-bottom: 1.3rem
-      &--primary
-        font-size: 1.833rem
-    &__image
-      margin-bottom: 3.333rem
-      &--design
-        margin-bottom: 1.4rem
-    &__text
-      font-size: 1.25rem
-      padding: 0 1.7rem
-      &--projects
-        font-size: 1.167rem
-        letter-spacing: 0
-        max-width: 25.416rem
-      &--light
-        color: $light
-        line-height: 1.75rem
-        padding-top: 0.1rem
-        margin-bottom: 1rem
-    &__word
-      &::after
-        display: none
-  .types
-    padding: 0 1.5rem
-    &__section-title
-      margin-bottom: 0
-    &--dark
-      background-color: $dark
-  .card
-    width: 100%
-    margin-bottom: 6.55rem
-    &__text
-      margin-top: -11.9rem
-      max-width: 22.5rem
-      padding: 1.75rem 3.417rem 2.6rem 2.583rem
-    &__item
-      padding: 0
-      font-size: 1.08rem
-      line-height: 1.265rem
-      margin-left: -0.2rem
-      &--hidden
-        display: none
-    &__pricetag
-      max-width: 15.833rem
-      height: auto
-      padding: 0.95rem 0
-      font-size: 1.25rem
-      text-align: center
-      left: 0.1rem
-      bottom: -1.667rem
-    &__image
-      &--desktop
-        display: none
-      &--mobile
-        display: flex
-        overflow: hidden
-
-  .section
-    &--dark
-      padding: 0 1.5rem 83rem 1.5rem
-  .swiper
-    &-slide
-      padding-bottom: 1.8rem
-      width: 100%
-      &__heading
-        font-size: 1.167rem
-      &__text
-        flex-basis: 50%
-        max-width: 50%
-        justify-content: flex-start
-        font-size: 1.167rem
-        padding-bottom: 3rem
-        margin-bottom: 0
-      &-bullet
-        width: 8px
-        height: 8px
-    &-container
-      &--images
-        max-height: 16.833rem
-        overflow: hidden
-  .designs
-    &--dark
-      background-color: #252525
-    &__container
-      padding: 1.9rem 1.5rem
-      width: 100%
-
-  .row
-    flex-direction: column
-  .col
-    &-40, &-60, &-50
-      flex-basis: 100%
-      max-width: 100%
-      padding-bottom: 3.333rem
-    &-60
-      max-height: 16.833rem
-      padding: 0
-    &-40
-      padding-bottom: 2.8rem
-  .swiper-container-horizontal>.swiper-pagination-bullets
-    width: auto
-    bottom: -2px
-  .control
-    padding-bottom: 0.5rem
-    &__heading
-      padding-top: 0
-      margin-top: 0
-      margin-bottom: 2rem
-    &__video
-      max-width: 28.333rem
-      min-height: 17.25rem
-      background-size: cover
-      margin-bottom: 2.333rem
-    &__text
-      color: $light
-      font-size: 1.167rem
-      line-height: 172%
-      padding-bottom: 0
-      margin-bottom: 2.3rem
-      &::before
-        margin-bottom: 1.4rem
-    &__section-title
-      margin-top: -78.5rem
-    &__input-group
-      flex-basis: 100%
     &__label
-      color: rgba($light, 0.5)
-      font-size: 1.25rem
-      margin-bottom: 0
-    &__form
-      justify-content: flex-start
-    &__input
-      font-size: 1.5rem
-      margin-bottom: 0
-      padding-top: 0.1rem
-      border-color: rgba($light, 0.5)
-      &::placeholder
-        font-family: 'Futura Book', sans-serif
-        color: $light
-        opacity: 1
-    &__input-group
-      &:first-of-type
-        margin-bottom: 5.1rem
-    &__button
+      font-size: 1rem
+      text-align: center
+  .cost-calc
+    &__container
+      background-image: none
+    &__wrap
+      flex-basis: 100%
       max-width: 100%
-      order: 4
-      font-size: 1.25rem
-      max-height: 4.25rem
-    &__policy
-      margin-top: 1rem
-      &-label
-        padding: 0
-        margin: 0
-        justify-content: flex-start
-        font-size: 1.333rem
-        color: $light
-        margin-bottom: 5.3rem
-  .video
-    &__play
-      padding-top: 0.5rem
-      width: 70px
-      height: 70px
-  .footer
-    background: #252525
-    width: 100%
-    padding: 6.33rem 1.5rem 5rem 1.5rem
+    &__input
+      &-group
+        flex-basis: 50%
+  .row
+    justify-content: center
+    align-items: center
+    padding-left: 0
+    padding-right: 0
+  .col-30
+    flex-basis: 100%
+  .cases
+    &__container
+      padding-left: 1rem
+      padding-right: 1rem
+    &__slider
+      padding-bottom: 1rem
+      &__image
+        &__container
+          margin-left: 1rem
+          margin-right: 1rem
+          height: 80vh
+  .card
+    &__services
+      max-width: 100%
+  .services
+    &__col
+      flex-basis: 100%
+  .reviews
+    &__section
+      padding-bottom: 2rem
+    &__slider
+      padding-bottom: 1rem
+      &__card
+        &__title
+          font-size: 1rem
+          line-height: 1.3rem
+          padding-bottom: 1rem
+  .news
+    &__slider
+      &__card
+        background: $light url('../img/news/bg-img-news.jpg') no-repeat center / cover
+    &__desc
+      padding: 1.5rem
+      &__title
+        margin-bottom: 1rem
+      &__text
+        margin-bottom: 1rem
+    &__img
+      display: none
+  .question
+    &__section
+      background-image: none
     &__container
       display: flex
       flex-direction: column
+      justify-content: center
       align-items: center
-      width: 100%
-      background: #252525
+    &__content
+      flex-basis: 100%
+      margin-right: 0
     &__title
-      font-size: 1.667rem
-      margin-bottom: 4.333rem
-    &__wrap
-      background: #252525
-      padding: 0
-      width: 100%
-      margin-top: 0
-    &__input
-      &-group
-        flex-basis: 100%
-        &:nth-of-type(3)
-          margin-bottom: 0
-          & > .input
-            margin-bottom: 1rem
-      &--light
-        font-size: 1.5rem
-        margin-bottom: 2rem
-    &__policy
-      margin-bottom: 5.583rem
+      text-align: center
+    &__contacts
+      flex-direction: row
+      max-width: 100%
+      justify-content: center
+      &__addr
+        &__container
+          max-width: 100%
+          margin-bottom: 1rem
+      &__timetable
+        &__container
+          max-width: 100%
+        &__text
+          margin-bottom: 1rem
+    &__form
+      align-items: center
     &__button
-      min-width: 100%
-      max-height: 4.25rem
-      font-size: 1.25rem
-      text-transform: uppercase
-      // padding: 1.583rem 0
-    &__menu
-      display: none
-    &__heading
-      font-size: 1.5rem
-      padding: 0 1rem
-      line-height: 130%
-      margin-bottom: 2rem
-      order: 3
-    &__icons
-      order: 4
-      margin-bottom: 3.4rem
-      &-wrap
-        &--e-mail
-          width: 39px
-          height: 39px
-          margin-right: 1.5rem
-          background-size: 22px
-        &--insta
-          width: 39px
-          height: 39px
-          background-size: 20px
-    &__map
+      &--light
+        min-width: 11.875rem
+        min-height: 2.6875rem
+        border: 2px solid $primary
+        border-radius: 1.34375rem
+        text-align: center
+        font-family: 'Ubuntu', serif
+        font-weight: 500
+        font-size: 1em
+        color: $light
+        background-color: $primary
+        transition: background-color .3s
+        transition: color .3s
+        &:hover
+          box-sizing: border-box
+          cursor: pointer
+          border: 2px solid $primary
+          background-color: transparent
+          color: $primary
+  .menu
+    &__scroll
+      &__flex-block
+        padding-left: 0
+        padding-right: 0
+      &__container
+        padding-left: 1rem
+        padding-right: 1rem
+  .nav
+    &__container
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
       width: 100%
-      overflow: hidden
-      max-height: 21.5rem
-      padding: 0
-      margin-bottom: 3.5rem
-  .policy
-    &__label
-      &--center
-        font-size: 1.333rem
-        justify-content: flex-start
-  div
-    &.invalid
-      padding: 0px
-      right: 0
-      bottom: -1rem
-  .policy
-    & > div
-      &.invalid
-        bottom: -1.5rem
+      
 
-
-
-
-
-@media screen and (max-height: 544px)
-  .hero
-    &__scroll-down
-      display: none
   
+  
+// @media screen and ( max-width: 600px) 
+
+  
+
+// @media screen and ( max-width: 576px) +
+
+
+
+
+
+
+//@media screen and (max-height: 544px)

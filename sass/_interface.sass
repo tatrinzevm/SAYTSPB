@@ -85,6 +85,7 @@ button, input
       align-items: center
       padding: 1,9375rem 0
 
+
 .label
   font-size: 1.07rem
   &--light
@@ -118,6 +119,61 @@ button, input
     &:hover
       max-width: 2rem
       max-height: 3.7391rem
-
+.burger-menu
+  z-index: 20
+  position: fixed
+  right: 2rem
+  top: 2rem
+  width: 50px
+  height: 50px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  border-radius: 3px
+  border: 1px solid #38393b
+  box-shadow: 0 0 2px 0px #38393b
+  &:hover
+    cursor: pointer
+  &__line
+    transition: all 0.3s
+    width: 40px
+    margin: 5px
+    height: 4px
+    background-color: #38393b
+.first
+  transform: translate(8px, 2px) rotate(45deg)
+  transform-origin: left top
+.middle
+  transform: scale(0)
+.last
+  transform: translate(-3px, -26px) rotate(-45deg)
+  transform-origin: right bottom
+.burger
+  &__menu
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background-color: $light
+    width: 100vw
+    z-index: 10
+    position: fixed
+    left: -100vw
+    top: 0px
+    transition: all 0.5s
+    opacity: .95
+    padding-top: 2rem
+    padding-bottom: 2rem
+    &__item
+      font-family: 'Ubuntu', serif
+      font-size: 1.5rem
+      font-weight: 700
+      margin-bottom: 1rem
+      text-transform: uppercase
+      text-decoration: none
+      color: #38393b
+.menu-active
+  left: 0
 
  

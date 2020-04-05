@@ -59,24 +59,31 @@ $(document).ready(function () {
   });
 
   $(window).on('scroll', function () {
-    if($(window).scrollTop()>100) {
+    if($(window).scrollTop() > 100 && $(window).width() > 992) {
       scrollMenu.removeClass('menu__scroll__flex-block--hidden');
     } else {
       scrollMenu.addClass('menu__scroll__flex-block--hidden');
     }
   });
 
+  
+
   // scrollUpBtn.on('click', function () {
   //   $("html,body").animate({scrollTop:0},500);
   // });
 
-  $('a[href*="#"]').click(function() {
+  $('a[href*="#"]').click(function(evt) {
     $("html,body").animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 400);
+    $('.burger-menu__line:nth-child(1)').removeClass('first');
+    $('.burger-menu__line:nth-child(2)').removeClass('middle');
+    $('.burger-menu__line:nth-child(3)').removeClass('last');
+    $('.burger__menu').removeClass('menu-active');
     return false;
-});
+  });
 
+  
   //Валидация форм
   // Форма модального окна
   $('.modal__form').validate({
@@ -320,4 +327,14 @@ $(document).ready(function () {
   });
   // Маска для номера телефона
   $('[type=tel]').mask('+7 000 000-00-00');
+
+  // Бургер-меню
+  $('.burger-menu').click(function () {
+    $('.burger-menu__line:nth-child(1)').toggleClass('first');
+    $('.burger-menu__line:nth-child(2)').toggleClass('middle');
+    $('.burger-menu__line:nth-child(3)').toggleClass('last');
+  });
+  $('.burger-menu').click(function(){
+    $('.burger__menu').toggleClass('menu-active');
+  });
 });

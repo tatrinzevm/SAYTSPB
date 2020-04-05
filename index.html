@@ -45,7 +45,22 @@
           <button class="button contacts__button" data-toggle='modal'>Заказать звонок</button>
         </div>
       </div>
+      
       <!-- /.menu -->
+      <div class="burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+      </div>
+    </div>
+    <div class="burger__menu">
+      <a href="#home" class="burger__menu__item">Главная</a>
+      <a href="#promotion" class="burger__menu__item">Продвижение</a>
+      <a href="#audit" class="burger__menu__item">Аудит</a>
+      <a href="#prices" class="burger__menu__item">Цены</a>
+      <a href="#contacts" class="burger__menu__item">Контакты</a>
+      <a href="tel:+78129921030" class="burger__menu__item">+7(812)-992-10-30</a>
+      <button class="button contacts__button" data-toggle='modal'>Заказать звонок</button>
     </div>
     <!-- /.container -->
   </header>
@@ -69,7 +84,7 @@
       <div class="hero__container">
         <div class="container">
           <div class="hero__content">
-            <h1 class="title hero__title">Продвижение Сайтов
+            <h1 class="title hero__title">Продвижение Сайтов<br>
               <span class="title--primary">в&nbsp;Санкт-Петербурге</span></h1>
             <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
             <button class="button hero__button button--primary" data-toggle='modal'>Обратный звонок</button>
@@ -435,11 +450,11 @@
           <div class="news__slider__card__container">
             <div class="news__slider__card">
               <div class="news__img__container">
+                <img src="img/news/bg-img-news.jpg" alt="" class="news__img">
                 <div class="news__slider__card__date">
                   <span class="news__slider__card__date__day">01</span>
                   <span class="news__slider__card__date__month">Апр</span>
                 </div>
-                <!-- <img src="img/news/bg-img-news.jpg" alt="" class="news__img"> -->
               </div>
               <div class="news__desc__container">
                 <div class="news__desc">
@@ -454,11 +469,11 @@
             <!--.news__slider__card-->
             <div class="news__slider__card">
               <div class="news__img__container">
+                <img src="img/news/bg-img-news.jpg" alt="" class="news__img">
                 <div class="news__slider__card__date">
                   <span class="news__slider__card__date__day">02</span>
                   <span class="news__slider__card__date__month">Мар</span>
                 </div>
-                <!-- <img src="img/news/bg-img-news.jpg" alt="" class="news__img"> -->
               </div>
               <div class="news__desc__container">
                 <div class="news__desc">
@@ -473,11 +488,11 @@
             <!--.news__slider__card-->
             <div class="news__slider__card">
               <div class="news__img__container">
+                <img src="img/news/bg-img-news.jpg" alt="" class="news__img">
                 <div class="news__slider__card__date">
                   <span class="news__slider__card__date__day">04</span>
                   <span class="news__slider__card__date__month">Апр</span>
                 </div>
-                <!-- <img src="img/news/bg-img-news.jpg" alt="" class="news__img"> -->
               </div>
               <div class="news__desc__container">
                 <div class="news__desc">
@@ -578,11 +593,9 @@
       <form action="send.php" method="POST" class="form modal__form" onsubmit="ym(61432480, 'reachGoal', 'sendModalForm'); return true;">
         <input type="hidden" name="formName" value="modal">
         <div class="input-group modal__input-group">
-          <!-- <label for="user-name" class="label form__label label--light">Имя</label> -->
           <input type="text" name="userName" class="input form__input modal__input--light" id="user-name" placeholder="Ваше имя" autocomplete="off">
         </div>
         <div class="input-group modal__input-group">
-          <!-- <label for="user-phone" class="label form__label label--light">Телефон</label> -->
           <input type="tel" name="userPhone" class="input form__input modal__input--light" id="user-phone" placeholder="Ваш номер телефона" autocomplete="off">
         </div>
         <button class="button button--primary modal__button">Отправить</button>
