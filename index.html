@@ -11,18 +11,19 @@
 </head>
 <body>
   <!-- Yandex.Metrika counter -->
-  <!-- <script>
+  <script>
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(61432480, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-    }); -->
-  </script><!-- end of Yandex.Metrika counter -->
+ 
+    ym(61659100, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+  </script>
+  <!-- end of Yandex.Metrika counter -->
   <header class="header">
     <div class="container header__container">
       <div class="menu header__menu">
@@ -47,6 +48,9 @@
       </div>
       
       <!-- /.menu -->
+      <a href="#home"><div class="menu__logo--mobile">
+        <img src="img/favicon.png" alt="logo" class="menu__logo__img--mobile">
+      </div></a>
       <div class="burger-menu">
         <div class="burger-menu__line"></div>
         <div class="burger-menu__line"></div>
@@ -90,6 +94,10 @@
             <button class="button hero__button button--primary" data-toggle='modal'>Обратный звонок</button>
           </div>
           <!-- /.hero__content -->
+          <div class="hero__main-img__container">
+            <img src="img/hero-main-img.png" alt="" class="hero__main-img">
+          </div>
+          
         </div>
         
        </div>
@@ -318,7 +326,7 @@
       <div class="container cost-calc__container" id="prices">
         <div class="cost-calc__wrap">
           <h3 class="cost-calc__title">Узнать стоимость</h3>
-          <form action="send.php" method="POST" class="form cost-calc__form" onsubmit="ym(61432480, 'reachGoal', 'costCalcFormSend'); return true;">
+          <form action="send.php" method="POST" class="form cost-calc__form" onsubmit="ym(61659100, 'reachGoal', 'costCalcFormSend'); return true;">
             <input type="hidden" name="formName" value="costCalc">
             <div class="input-group cost-calc__input-group">
               <label for="user-name_question" class="label form__label cost-calc__form__label">Имя</label>
@@ -330,7 +338,7 @@
             </div>
             <div class="input-group cost-calc__input-group cost-calc__input-group">
               <label for="user-site" class="label form__label cost-calc__form__label">Адрес веб-сайта</label>
-              <input type="text" name="userSite" class="input form__input cost-calc__input" id="user-question" placeholder="tatsianapavlenko.ru" autocomplete="off">
+              <input type="text" name="userSite" class="input form__input cost-calc__input" id="user-site" placeholder="tatsianapavlenko.ru" autocomplete="off">
             </div>
             <div class="input-group cost-calc__input-group cost-calc__input-group">
               <label for="user-message" class="label form__label cost-calc__form__label">Сообщение</label>
@@ -544,7 +552,7 @@
           </div>
         </div>
         <div class="question__wrap">
-          <form action="send.php" method="POST" class="form question__form" onsubmit="ym(61432480, 'reachGoal', 'questionFormSend'); return true;">
+          <form action="send.php" method="POST" class="form question__form" onsubmit="ym(61659100, 'reachGoal', 'questionFormSend'); return true;">
             <input type="hidden" name="formName" value="question">
             <div class="input-group question__input-group">
               <label for="user-name_question" class="label form__label question__form__label">Имя</label>
@@ -575,7 +583,7 @@
           <div class="logo footer__logo">
             <img src="img/favicon.png" alt="logo" class="logo__img footer__logo__img">
             <p class="footer__logo__mark">SAYTSPB</p>
-          </div></a>
+          </div>
           <div class="footer__horizontal-line"></div>
           <div class="footer__copyrights">Copyright &copy; 2020. Glo Academy. Все права защищены</div>
         </div>
@@ -590,7 +598,8 @@
 
   <div class="modal">
     <div class="modal__dialog">
-      <form action="send.php" method="POST" class="form modal__form" onsubmit="ym(61432480, 'reachGoal', 'sendModalForm'); return true;">
+      <button class="modal__close"></button>
+      <form action="send.php" method="POST" class="form modal__form" onsubmit="ym(61659100, 'reachGoal', 'modalFormSend'); return true;">
         <input type="hidden" name="formName" value="modal">
         <div class="input-group modal__input-group">
           <input type="text" name="userName" class="input form__input modal__input--light" id="user-name" placeholder="Ваше имя" autocomplete="off">
@@ -647,6 +656,12 @@
     <!-- /.container -->
   </div>
   <!-- /.button__flex-block -->
+  <div class="button__scroll-up__flex-block button__scroll-up__flex-block">
+    <div class="button__scroll-up__container">
+      <button class="button__scroll-up">Наверх</button>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>

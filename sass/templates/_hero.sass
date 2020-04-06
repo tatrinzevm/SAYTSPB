@@ -1,8 +1,9 @@
 .hero
   width: 100%
   background-color: $light
-  background-image: url('../img/hero-bg-img.jpg')
-  background-size: cover
+  //background-image: url('../img/hero-bg-img.jpg')
+  background-image: url('../img/bg-main.jpg')
+  background-size: 93% 95%
   background-repeat: no-repeat
   background-position-y: -10px
   background-position-x: -5px
@@ -12,10 +13,21 @@
   display: flex
   flex-direction: row
   justify-content: center
+  //padding-bottom: 5rem
   &__aside
     position: absolute
     left: 3.5rem
     top: 8.5rem
+    &::after
+      content: 'SEO'
+      text-transform: uppercase
+      color: #e3fbdd
+      font-size: 11rem
+      font-weight: 500
+      transform: rotate(-90deg)
+      position: absolute
+      left: 0rem
+      bottom: 2rem
   &__container
     width: 100%
     background-origin: content-box
@@ -24,13 +36,16 @@
     align-items: center
     justify-content: center
     position: relative
+    margin-bottom: 4.5625rem
   &__title
     margin: 0
   &__content
-    padding-bottom: 3rem
+    //padding-bottom: 3rem
+    padding-top: 3rem
     position: relative
     width: 100%
     max-width: 47.587rem
+    z-index: 199
   &__text
     font-family: 'Ubuntu', serif
     font-size: 1.25rem
@@ -49,6 +64,17 @@
   &__instagram
     max-width: 5.714rem
     height: 100%
+  &__main-img
+    width: auto
+    height: 100%
+    &__container
+      position: absolute
+      top: 17%
+      left: 50%
+      width: 40vw
+      height: 64vh
+      max-width: 47.6875rem
+      max-height: 47.25rem
 
 .aside
   display: flex

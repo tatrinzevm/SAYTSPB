@@ -6,9 +6,12 @@ $(document).ready(function () {
       modalError = $('.modal__error'),
       modalForm = $('.modal__form'),
       modalBtn = $('[data-toggle=modal]'),
+      closeBtn = $('.modal__close'),
       scrollMenu = $('.menu__scroll__flex-block'),
+      scrollUpBtn = $('.button__scroll-up__flex-block'),
       modalBtnOK = $('.modal__button--OK');
   scrollMenu.addClass('menu__scroll__flex-block--hidden');
+  scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
   
   modalBtn.on('click', function () {
     modal.addClass('modal--visibility');
@@ -20,6 +23,9 @@ $(document).ready(function () {
   });
 
   /*Обработчик события click на кнопку закрытия модального окна.*/
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visibility');
+  });
 
   $(document).on('click', function (evt) {
     if(evt.target.classList.contains('modal')) {
@@ -59,19 +65,20 @@ $(document).ready(function () {
   });
 
   $(window).on('scroll', function () {
-    if($(window).scrollTop() > 100 && $(window).width() > 992) {
-      scrollMenu.removeClass('menu__scroll__flex-block--hidden');
+    if($(window).scrollTop() > 100) {
+      if($(window).width() > 992) { scrollMenu.removeClass('menu__scroll__flex-block--hidden');}
+      scrollUpBtn.removeClass('button__scroll-up__flex-block--hidden');
     } else {
       scrollMenu.addClass('menu__scroll__flex-block--hidden');
+      scrollUpBtn.addClass('button__scroll-up__flex-block--hidden');
     }
   });
 
+  scrollUpBtn.on('click', function () {
+    $("html,body").animate({scrollTop:0},500);
+  });
+
   
-
-  // scrollUpBtn.on('click', function () {
-  //   $("html,body").animate({scrollTop:0},500);
-  // });
-
   $('a[href*="#"]').click(function(evt) {
     $("html,body").animate({
         scrollTop: $($.attr(this, 'href')).offset().top
@@ -310,9 +317,7 @@ $(document).ready(function () {
     if(k != newsCurrentCard) {newsList[k].hide();}
     k++;
   });
-  $(document).on('click', function (evt) {
-    console.log(evt.target);
-  });
+
 
   $('.news__slider__button__left').on('click', function () {
     newsList[newsCurrentCard--].hide(0);

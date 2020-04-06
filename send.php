@@ -9,8 +9,9 @@
   <?php
     $userName = $_POST['userName'];
     if (isset($_POST['userEmail'])) {$userEmail = $_POST['userEmail'];}
-    $userPhone = $_POST['userPhone'];
-    if (isset($_POST['userQuestion'])) {$userQuestion = $_POST['userQuestion'];}
+    if(isset($_POST['userPhone'])) {$userPhone = $_POST['userPhone'];}
+    if (isset($_POST['userSite'])) {$userSite = $_POST['userSite'];}
+    if (isset($_POST['userMessage'])) {$userMessage = $_POST['userMessage'];}
     $formName = $_POST['formName'];
     $content = array (
       "success" => "",
@@ -18,18 +19,18 @@
     );
     if ($formName == 'modal'):
       $subject = '=?UTF-8?B?'.base64_encode('Новая заявка с сайта').'?=';
-      $body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его почта: ${userEmail}.";
-      $content["success"] = "${userName}, Ваша заявка отправлена.<br>Мы свяжемся с Вами по телефону ${userPhone}<br>или по электронной почте ${userEmail}";
+      $body = "Имя пользователя: ${userName}, его телефон: ${userPhone}.";
+      $content["success"] = "${userName}, Ваша заявка отправлена.<br>Мы свяжемся с Вами по телефону ${userPhone}";
       $content["error"] = "${userName}, к сожалению при отправке Вашей заявки возникла ошибка: ";
-    elseif ($formName == 'control'):
-      $subject = '=?UTF-8?B?'.base64_encode('Новая заявка на трансляцию с сайта').'?=';
-      $body = "Имя пользователя: ${userName}, его телефон: ${userPhone}";
-      $content["success"] = "${userName}, Ваша заявка на трансляцию отправлена.<br>Мы свяжемся с Вами по телефону ${userPhone}";
-      $content["error"] = "${userName}, к сожалению при отправке Вашей заявки на трансляцию возникла ошибка: ";
     elseif ($formName == 'question'):
       $subject = '=?UTF-8?B?'.base64_encode('Новый вопрос с сайта').'?=';
-      $body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его вопрос: ${userQuestion}.";
-      $content["success"] = "${userName}, Ваш вопрос отправлен.<br>Мы свяжемся с Вами по телефону ${userPhone}";
+      $body = "Имя пользователя: ${userName}, его телефон: ${userPhone}, его электронная почта: ${userEmail}, его вопрос: ${userMessage}";
+      $content["success"] = "${userName}, Ваш вопрос отправлен.<br>Мы свяжемся с Вами по телефону ${userPhone} или по электронной почте ${userEmail}";
+      $content["error"] = "${userName}, к сожалению при отправке Вашей заявки на трансляцию возникла ошибка: ";
+    elseif ($formName == 'costCalc'):
+      $subject = '=?UTF-8?B?'.base64_encode('Новый запрос на расчет стоимости с сайта').'?=';
+      $body = "Имя пользователя: ${userName}, его электронная почта: ${userEmail}, его сайт: ${userSite}, его сообщение: ${userMessage}.";
+      $content["success"] = "${userName}, Ваш вопрос отправлен.<br>Мы свяжемся с Вами по телефону ${userPhone} или по электронной почте ${userEmail}";
       $content["error"] = "${userName}, к сожалению при отправке Вашего вопроса возникла ошибка: ";
     endif;
     
@@ -53,7 +54,7 @@
       $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
       //Recipients
-      $mail->setFrom('tatrinzevm.orders@gmail.com', '=?UTF-8?B?'.base64_encode('Сайт Repair Design').'?=');
+      $mail->setFrom('tatrinzevm.orders@gmail.com', '=?UTF-8?B?'.base64_encode('Сайт SAYTSPB').'?=');
       $mail->addAddress('tatrinzevm@gmail.com', '=?UTF-8?B?'.base64_encode('Максим').'?=');     // Add a recipient
 
       // Content

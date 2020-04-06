@@ -1,4 +1,4 @@
-@media screen and (max-width: 3000px)
+@media screen and (max-width: 5000px)
   .burger-menu
     display: none
 @media screen and (max-width: 1400px)
@@ -8,8 +8,14 @@
     &__services
       margin-bottom: 0
   .hero
+    &__content
+      padding-left: 2rem
+      padding-right: 2rem
     &__aside
       left: 1rem
+    &__title
+      font-size: 2.5rem
+      letter-spacing: normal
   .indicators
     background-size: contain
     &__box
@@ -28,6 +34,15 @@
   .burger-menu
     display: none
 @media screen and ( max-width: 1200px)
+  .container
+    padding-left: 3rem
+    padding-right: 3rem
+  .header
+    padding-left: 0
+    padding-right: 0
+    &__container
+      padding-left: 0
+      padding-right: 0
   .hero
     &__aside
       left: 1rem
@@ -45,9 +60,7 @@
   .news
     &__slider
       padding-left: 3rem
-  .container
-    padding-left: 3rem
-    padding-right: 3rem
+  
   .row
     justify-content: flex-start
     align-items: center
@@ -97,8 +110,17 @@
     display: none
 
   .hero
+    background: url('../img/hero-bg-img-mobile.jpg') no-repeat center / cover
     &__aside
       display: none
+      &::after
+        display: none
+    &__main-img
+      &__container
+        display: none
+    &__content
+      padding-left: 0
+      padding-right: 0
   .indicators
     background-size: contain
     max-width: 100%
@@ -184,7 +206,7 @@
       padding-left: 1rem
       padding-right: 1rem
   .hero
-    background-image: url('../img/hero-bg-img-mobile.jpg')
+    background: url('../img/hero-bg-img-mobile.jpg') no-repeat center / cover
     &__container
       padding-top: 4rem
   .indicators
@@ -225,7 +247,7 @@
           height: 80vh
   .card
     &__services
-      max-width: 100%
+      width: 100%
   .services
     &__col
       flex-basis: 100%
@@ -259,6 +281,7 @@
       flex-direction: column
       justify-content: center
       align-items: center
+      padding-top: 2rem
     &__content
       flex-basis: 100%
       margin-right: 0
@@ -321,11 +344,20 @@
 
   
 
-// @media screen and ( max-width: 576px) +
+@media screen and ( max-width: 576px)
+  .cases
+    &__slider
+      &__image
+        &__container
+          height: 30vh
 
 
 
 
 
 
-//@media screen and (max-height: 544px)
+@media screen and (max-height: 700px)
+  .hero
+    //background-image: url('../img/hero-bg-img-mobile.jpg')
+    &__content
+      padding-top: 5rem
